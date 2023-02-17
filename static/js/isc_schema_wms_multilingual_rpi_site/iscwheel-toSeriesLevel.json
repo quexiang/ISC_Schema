@@ -1,0 +1,350 @@
+﻿[
+	{
+		"name": "Precambrian", "colour": "#F74370",
+		"children": [
+			{
+				"name": "Hadean(informal)", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "Archean", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "Eoarchean", "colour": "#DA037F"
+					},	
+					{
+						"name": "Paleoarchean", "colour": "#F4449F"
+					},	
+					{
+						"name": "Mesoarchean", "colour": "#F768A9"
+					},	
+					{
+						"name": "Neoarchean", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "Proterozoic", "colour": "#F73563",
+				"children": [
+					{
+						"name": "Paleoproterozoic", "colour": "#F74370",
+						"children": [
+							{
+								"name": "Siderian", "colour": "#F74F7C"
+							},
+							{
+								"name": "Rhyacian", "colour": "#F75B89"
+							},
+							{
+								"name": "Orosirian", "colour": "#F76898"
+							},
+							{
+								"name": "Statherian", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "Mesoproterozoic", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "Calymmian", "colour": "#FDC07A"
+							},
+							{
+								"name": "Ectasian", "colour": "#FDCC8A"
+							},
+							{
+								"name": "Stenian", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "Neoproterozoic", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "Tonian", "colour": "#FEBF4E"
+							},
+							{
+								"name": "Cryogenian", "colour": "#FECC5C"
+							},
+							{
+								"name": "Ediacaran", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "Phanerozoic", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "Paleozoic", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "Cambrian", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "Terreneuvian", "colour": "#8CB06C"
+											},
+											{
+												"name": "Series_2", "colour": "#99C078"
+											},									
+											{
+												"name": "Series_3", "colour": "#A6CF86"
+											},
+											{
+												"name": "Furongian", "colour": "#B3E095"
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Ordovician", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "Lower Ordovician", "colour": "#1A9D6F"
+											},
+											{
+												"name": "Middle Ordovician", "colour": "#4DB47E"
+											},									
+											{
+												"name": "Upper Ordovician", "colour": "#7FCA93"
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Silurian", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "Llandovery", "colour": "#99D7B3"
+											},
+											{
+												"name": "Wenlock", "colour": "#B3E1C2"
+											},									
+											{
+												"name": "Ludlow", "colour": "#BFE6CF"
+											},
+											{
+												"name": "Pridoli", "colour": "#E6F5E1"
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Devonian", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "Lower Devonian", "colour": "#E5AC4D"
+											},
+											{
+												"name": "Middle Devonian", "colour": "#F1C868"
+											},									
+											{
+												"name": "Upper Devonian", "colour": "#F1E19D"
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Carboniferous", "colour": "#67A599",
+								"children": [
+									{
+										"name": "Mississippian", "colour": "#678F66",
+										"children": [
+											{
+												"name": "Lower Mississippian", "colour": "#80AB6C"
+											},
+											{
+												"name": "Middle Mississippian", "colour": "#99B46C"
+											},									
+											{
+												"name": "Upper Mississippian", "colour": "#B3BE6C"
+											}								
+										]
+									},
+									{
+										"name": "Pennsylvanian", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "Lower Pennsylvanian", "colour": "#8CBEB4"
+											},
+											{
+												"name": "Middle Pennsylvanian", "colour": "#A6C7B7"
+											},									
+											{
+												"name": "Upper Pennsylvanian", "colour": "#BFD0BA"
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "Permian", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "Cisuralian", "colour": "#EF5845"
+											},
+											{
+												"name": "Guadalupian", "colour": "#FB745C"
+											},									
+											{
+												"name": "Lopingian", "colour": "#FBA794"
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "Mesozoic", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "Triassic", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "Lower Triassic", "colour": "#983999"
+											},
+											{
+												"name": "Middle Triassic", "colour": "#B168B1"
+											},									
+											{
+												"name": "Upper Triassic", "colour": "#BD8CC3"
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Jurassic", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "Lower Jurassic", "colour": "#42AED0"
+											},
+											{
+												"name": "Middle Jurassic", "colour": "#80CFD8"
+											},									
+											{
+												"name": "Upper Jurassic", "colour": "#B3E3EE"
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Cretaceous", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "Lower Cretaceous", "colour": "#8CCD57"
+											},
+											{
+												"name": "Upper Cretaceous", "colour": "#A6D84A"
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "Cenozoic", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "Paleogene", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "Paleocene", "colour": "#FDA75F"
+											},
+											{
+												"name": "Eocene", "colour": "#FDB46C"
+											},									
+											{
+												"name": "Oligocene", "colour": "#FDC07A"
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Neogene", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "Miocene", "colour": "#FFFF00"
+											},
+											{
+												"name": "Pliocene", "colour": "#FFFF99"
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "Quaternary", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "Pleistocene", "colour": "#FFF2AE"
+											},
+											{
+												"name": "Holocene", "colour": "#FEF2E0"
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

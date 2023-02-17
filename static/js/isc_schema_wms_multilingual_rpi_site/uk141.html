@@ -1,0 +1,820 @@
+<html>
+	<head>
+		<title>Pilot study</title>
+
+		<!-- <link type="text/css" rel="stylesheet" href="ECOTree.css" />-->
+		<xml:namespace ns="urn:schemas-microsoft-com:vml" prefix="v"/>
+		<style>v\:*{ behavior:url(#default#VML);}</style> 			
+		<style>
+			.copy {
+				font-family : "Verdana";				
+				font-size : 10px;
+				color : #CCCCCC;
+			}
+		</style>
+	
+		<!-- Import OL CSS, auto import does not work with our minified OL.js build -->
+		<link rel="stylesheet" type="text/css" href="http://localhost:8080/geoserver/openlayers/theme/default/style.css"/>
+        <!-- Basic CSS definitions -->
+        <style type="text/css">
+            /* General settings */
+            body {
+                font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+                font-size: small;
+            }
+  
+            /* The map and the location bar */
+            #map {
+                clear: both;
+                position: relative;
+                width: 278px;
+                height: 512px;
+                border: 1px solid black;
+            }
+                        
+            #location {
+                float: right;
+            }
+			
+			#options {
+                position: absolute;
+                left: 13px;
+                top: 7px;
+                z-index: 3000;
+            }
+			
+            /* Styles used by the default GetFeatureInfo output, added to make IE happy */
+            table.featureInfo, table.featureInfo td, table.featureInfo th {
+                border: 1px solid #ddd;
+                border-collapse: collapse;
+                margin: 0;
+                padding: 0;
+                font-size: 90%;
+                padding: .2em .1em;
+            }
+            
+            table.featureInfo th {
+                padding: .2em .2em;
+                text-transform: uppercase;
+                font-weight: bold;
+                background: #eee;
+            }
+            
+            table.featureInfo td {
+                background: #fff;
+            }
+            
+            table.featureInfo tr.odd td {
+                background: #eee;
+            }
+            
+            table.featureInfo caption {
+                text-align: left;
+                font-size: 100%;
+                font-weight: bold;
+                text-transform: uppercase;
+                padding: .2em .2em;
+            }
+        </style>
+
+		
+		<!-- Import OpenLayers, reduced, wms read only version    "http://www.openlayers.org/api/OpenLayers.js"   -->
+        <script src="http://localhost:8080/geoserver/openlayers/OpenLayers.js" type="text/javascript">  //include the OpenLayers API
+		</script> 
+
+		
+		<script>
+			
+			var gtsRdf = null;			//SKOS vocabulary of Geological Time Scale ( .rdf file)
+			var titleXML = null;		//multilingual title
+			var GTSRcd;					//record of geological time scale in the table 'featureInfo' returned by the click on the map
+			
+			var termToFlash;            //English translation of the user input term
+			var termToContext;			//English translation of the user input term, but for seeing it in the expanded flash pie 
+			
+			//Load the map from WMS provided by GeoServer
+			var map;
+            var ukbedrockageTiled;
+			var ukbedrockageUntiled;
+
+            // pink tile avoidance
+            OpenLayers.IMAGE_RELOAD_ATTEMPTS = 5;
+            // make OL compute scale according to WMS spec
+            OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
+        
+            function init(){		//JavaScript function
+                // if this is just a coverage or a group of them, disable a few items,
+                // and default to jpeg format
+				OpenLayers.ProxyHost = "http://localhost:8080/geoserver/rest/proxy?url=";
+            
+                var bounds = new OpenLayers.Bounds(
+				-11.03522728,50.96973100,2.055681807,56.72768555
+                );
+				
+                var options = {
+					
+                    controls: [],
+                    maxExtent: bounds,
+                    maxResolution: 32,
+                    projection: "EPSG:4326",
+                    units: 'm'
+                };
+                map = new OpenLayers.Map('map', options);	//make 'map' object
+				
+				var baselayer_wms = new OpenLayers.Layer.WMS(
+				"BMNG", "http://mapsone.brgm.fr/bmng?map=/applications/mapserver/mapFiles/bmng.map",
+				{layers: 'bmng'}, 
+				{'isBaseLayer':true,	        
+				 'singleTile':true,
+				 transparent: true,
+				 'ratio':1
+				 }
+				);
+				ukbedrockageTiled = new OpenLayers.Layer.WMS(
+				    "GBR BGS 1:625k Bedrock Age Tiled", "http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms",
+                    {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: '512',
+                        width: '278',
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png',
+                        tiled: 'true',
+                        tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom
+                    },
+                    {
+                        buffer: 0,
+                        displayOutsideMaxExtent: true
+                    } 
+				);				
+                // setup ukbedrockageUntiled layer
+                ukbedrockageUntiled = new OpenLayers.Layer.WMS(			//define WMS layer
+                    "GBR BGS 1:625k Bedrock Age Untiled", "http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms",	//assign a layer name, base URL for WMS
+                    {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: '512',
+                        width: '278',
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png'
+                    },
+                    {
+                        singleTile: true, ratio: 1
+                    } 
+                );
+    
+                map.addLayers([baselayer_wms, ukbedrockageUntiled, ukbedrockageTiled]);		//add layers to map object
+
+                // build up all controls            
+                map.addControl(new OpenLayers.Control.PanZoomBar({
+                    position: new OpenLayers.Pixel(2, 15)
+                }));
+                map.addControl(new OpenLayers.Control.Navigation());
+               // map.addControl(new OpenLayers.Control.Scale($('scale')));
+               // map.addControl(new OpenLayers.Control.MousePosition({element: $('location')}));
+				//map.addControl(new OpenLayers.Control.LayerSwitcher());
+				//map.addControl(new OpenLayers.Control.OverviewMap());
+				map.zoomToExtent(bounds);		//zoom to the bounds of the layers
+                //map.zoomToMaxExtent();
+                // support GetFeatureInfo
+                // support GetFeatureInfo
+                map.events.register('click', map, function (e) {
+                    document.getElementById('nodelist').innerHTML = "Loading... please wait...";
+                    var params = {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: map.size.h,
+                        width: map.size.w,
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png',
+						tiled: 'true',
+                        tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom,	
+						
+                        REQUEST: "GetFeatureInfo",
+                        EXCEPTION: "text/xml",
+                        BBOX: map.getExtent().toBBOX(),
+                        X: e.xy.x,
+                        Y: e.xy.y,
+                        INFO_FORMAT: "text/html",
+                        QUERY_LAYERS: 'GBR_BGS_625k_BA',
+						//map.layers[1].params.layers,
+                        FEATURE_COUNT: 1                       
+                        };
+						
+                    OpenLayers.loadURL("http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?", params, this, setHTML, setHTML);
+                    OpenLayers.Event.stop(e);
+				});
+				//Load the SKOS vocabulary of Geological Time Scale (a rdf file)
+				gtsRdf = document.implementation.createDocument("","",null);
+				gtsRdf.load("http://localhost:8080/geoserver/mtgts12/gtsOwl5.rdf");		
+				
+				//Load the multilingual title file (a xml file)
+				titleXML = document.implementation.createDocument("","",null);
+				titleXML.load("http://localhost:8080/geoserver/mtgts12/title.xml");
+
+			}
+			
+			function popUpMapLegend()  //use the GetLegendGraphic request of WMS to get map legend from a wms server
+			{
+                var url = ukbedrockageTiled.getFullRequestString({
+					VERSION: "1.1.1",
+					REQUEST: "GetLegendGraphic",					
+                    EXCEPTIONS: "text/html", 	//specify format for errors
+					FORMAT: "image/png",
+					LAYER: "GBR_BGS_625k_BA",	
+                    FEATURE_COUNT: 1,							//the maximum number of features can be returned by the event 'click'
+					WIDTH: "35",
+					HEIGHT: "20"                      
+					});		
+					
+					//pop up a window to show the legend
+					window.open(url, "mywindow", "location=0,status=0,scrollbars=1,width=220,height=660");			
+			}
+			
+			function seeLegendInFlash() //use the GetStyles command of WMS to get the SLD file of a map
+			{
+				var params = {
+				VERSION: "1.1.1",
+				REQUEST: "GetStyles",					
+                EXCEPTIONS: "text/xml", 	//specify format for errors	
+				FORMAT: "text/xml",
+				LAYERS: "GBR_BGS_625k_BA"				
+				};
+				
+				OpenLayers.loadURL("http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?", params, this, getMapSLD, getMapSLD);
+			}
+			
+			function getMapSLD(response)
+			{
+				var k;
+				var gtsNameGrpToFlash;
+				gtsNameGrpToFlash = "";
+				
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].style.visibility="hidden";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = "";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = response.responseText;  //this is a tricky method to get the responsed text for later use with allGtsNames
+ 				//var sldXML = response.responseText;
+				//alert(sldXML);//////////////////////////////////////////////////////////
+				//send a group of values to Flash
+				var allGtsNames = document.getElementById('MapLegendBtns').getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Name"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+				for(k=0; k<allGtsNames.length; k++)
+				{
+					gtsNameGrpToFlash = gtsNameGrpToFlash + changeCase(allGtsNames[k].textContent) + "#";
+				}
+				sendToActionScript(gtsNameGrpToFlash); //pass the long string to flash
+			}			
+			
+			function resetFilter() 
+			{
+				document.getElementById('filter').value = "";   
+                updateFilter();
+            }
+			
+			function updateFilter()
+			{
+                var filter = document.getElementById('filter').value;
+                
+                // by default, reset all filter
+				var filterParams = {
+					SLD_BODY: null,
+					CQL_FILTER: null,
+					FILTER: null,
+					SLD: null
+                };
+				
+                if (OpenLayers.String.trim(filter) != "") 
+				{
+                    if (returnedTermArray[0] == 'PALEOZOIC')
+					{filterParams["SLD"] ='https://sites.google.com/site/xgmaitc/files/Paleozoic_Cm_fixed.xml';}  // tricky method, using a predefined sld file, due to the limits on length of SLD_BODY file sent to a server
+					
+					else if (returnedTermArray[0] == 'PHANEROZOIC')
+					{filterParams["SLD"] = 'https://sites.google.com/site/xgmaitc/files/Phanerozoic_Cm_fixed.xml';}  // tricky method, too. Openlayers.WMS.Post (also need lastese openlayers.js, can goole for more details) does not work for this study.
+					
+					else
+					filterParams["SLD_BODY"] = filter.toString();					
+                }
+                // merge the new filter definitions
+                ukbedrockageTiled.mergeNewParams(filterParams);
+				ukbedrockageUntiled.mergeNewParams(filterParams);
+            }
+			
+			
+			var mapLang = null;
+			var	transTrigger = 0;	//transTrigger is used in setHTML(response) and transGTS(langChosen)
+			var altLblIndr = 0;
+			var	i;		// 'i' is used in findMapLang() and buildDefinition(soleLang)
+			var btnValue = new Array();
+			
+            //sets the HTML provided into the nodelist element    //will run when results come back
+            function setHTML(response)
+			{	
+                document.getElementById('nodelist').innerHTML = response.responseText;	//put results in the div
+				//alert(document.getElementById('nodelist').innerHTML);///////////////////
+				//clear the information of previous GTS terms in several <div>s -
+				document.getElementById('originalTerm').innerHTML = "<br /><em></em>\r<h4></h4>\r<em></em>";
+				document.getElementById('GTSDefinition').innerHTML = "<br /><em></em><br /><em></em>\r<h4></h4>\r<em></em>\r<h4></h4>\r<em></em>";
+				document.getElementById('WikiDefinition').innerHTML = '<p><a href="http://www.wikipedia.org" target="_blank">Wikipedia</a></p>\r<em></em>';
+				document.getElementById('GsspInfo').innerHTML = '<p><a href="https://engineering.purdue.edu/Stratigraphy/gssp/index.php?parentid=all" target="_blank">GSSP</a></p>\r<em></em>' ;
+	
+				document.getElementById('AGIDefFrame').innerHTML = "<br/><em></em>";
+				document.getElementById('AGIDefinition').innerHTML = '';
+				
+				findMapLang();		//if can find map language (i.e., can find this GTS term in SKOS vocabulary), then MapLang will have a certain value
+				if(mapLang != null)
+					{
+						transTrigger = 1;
+						transGTS('en');	// can use 'transGTS(mapLang);' for showing and translating a term in its original language
+					}
+				else
+					transTrigger = 0;	//'transTrigger = 0' means cannot find this GTS term in SKOS vocabulary, then when user click lingual buttons, program will not run, see transGTS(langChosen)
+				
+				mapLang = null;		//clear the mapLang, in case the next click on map cannot find the record
+				
+				sendToActionScript(termToFlash); //animations in the flash, as a response to the term returend by a getFeatureInfo operation
+												//should consider in the future if the original term is not english,  what to do?
+												//should I change from webpage side: i.e. I first translate the term from map into english, then send to flash
+												//or, I can change from the flash side: i.e. I set up flash tree dynamically from the thesaurus in the language of the origianal term
+				
+				//termToContext = termToFlash+ 'p';
+            };
+						
+			//check the language of the chosen term from the map and return the value to mapLang
+			function findMapLang()	
+			{
+				//parameter '6' in '("td")[6]' is due to the table structure of the BGS bedrock age map
+				//GTSRcd = document.getElementById('nodelist').getElementsByTagName("tbody")[0].getElementsByTagName("td")[0].firstChild.nodeValue;				
+				//GTSRcd = document.getElementById("GTSCopyRcd").value; // get GTS Record from the text input
+				GTSRcd = document.getElementById('nodelist').getElementsByTagName("tbody")[0].getElementsByTagName("td")[0].firstChild.nodeValue;				
+				
+				GTSRcd = changeCase(GTSRcd);
+				
+				var allPrefLabels = gtsRdf.getElementsByTagName("skos:prefLabel");	//all prefLabel GTS terms in different languages
+				var allAltLabels = gtsRdf.getElementsByTagName("skos:altLabel");	//all altLabel GTS terms in different languages
+				var k, m, n;
+				
+				altLblIndr = 0;
+				mapLang = null;	//clear the mapLang, in case the previous steps e.g., manualTree(), have assigned it a value.
+				
+				// 'i' is very important, because it will be used in the function buildDefinition()
+				for(i=0; i<allPrefLabels.length; i++)
+				{
+					if (allPrefLabels[i].textContent == GTSRcd)
+					{	
+						mapLang = allPrefLabels[i].attributes.getNamedItem("xml:lang").nodeValue;
+						break;
+					}
+				}
+				
+				if(mapLang == null)	//cannot find this term in prefLabel GTS terms
+				{
+					for(k=0; k<allAltLabels.length; k++)	//try to find it in  altLabel GTS terms
+					{
+						if (allAltLabels[k].textContent == GTSRcd)
+						{	
+							mapLang = allAltLabels[k].attributes.getNamedItem("xml:lang").nodeValue;
+							altLblIndr = 1;
+							break;
+						}
+					}
+					
+					if(mapLang != null)	//mapLang gets a value from allAltLabels[k]
+					{	//change the i to point to the corresoping prefLabel of the found altLabel, 'i' will be used laterly in other functions
+						for(i=0; i<allPrefLabels.length; i++)
+						{
+							if (allPrefLabels[i].textContent == allAltLabels[k].parentNode.getElementsByTagName("skos:prefLabel")[0].textContent)
+								break;
+						}
+					}
+				}
+			}
+
+			//turn original string into such a style: the first character of each word in upper case, the other characters in the same word in lower case
+			function changeCase(frmObj) 
+			{
+				var index;
+				var tmpStr;
+				var tmpChar;
+				var preString;
+				var postString;
+				var strlen;
+				tmpStr = frmObj.toLowerCase();
+				strLen = tmpStr.length;
+				if (strLen > 0)  
+				{
+					for (index = 0; index < strLen; index++)  
+					{
+						if (index == 0)  
+						{
+							tmpChar = tmpStr.substring(0,1).toUpperCase();
+							postString = tmpStr.substring(1,strLen);
+							tmpStr = tmpChar + postString;
+						}
+						else 
+						{
+							tmpChar = tmpStr.substring(index, index+1);
+							if (tmpChar == " " && index < (strLen-1))  
+							{
+								tmpChar = tmpStr.substring(index+1, index+2).toUpperCase();
+								preString = tmpStr.substring(0, index+1);
+								postString = tmpStr.substring(index+2,strLen);
+								tmpStr = preString + tmpChar + postString;
+							}
+						}
+					}
+				}
+				return tmpStr;
+			}
+			
+			//find the GTS term and translate it into the chosen language
+			function transGTS(langChosen)	//langChosen is the language chosen by click one of the seven 'flag' buttons
+			{
+				if(transTrigger)	//value of transTrigger is provided by findMapLang() in setHTML(response): TURE means the GTS term can be found in the SKOS vocabulary
+					buildDefinition(langChosen);
+			}
+			
+			function buildDefinition(soleLang)	//soleLang is the language to be shown in the tree
+			{
+				//alert("total num of prefLabel: "+gtsRdf.getElementsByTagName("skos:prefLabel").length);
+				var	j, m, n, p;
+				var allPrefLabelTerms = gtsRdf.getElementsByTagName("skos:prefLabel");	//all GTS terms in different languages
+				
+				var definedTimeInterval;	//the defined time interval of the chosen GTS term from the map
+				var gsspPage;		//the gssp page address get from the gtsOWL ontology file
+				var agiDefinition;		//the gssp page address get from the gtsOWL ontology file
+				var bgn, end, tmpStr;				
+				
+				var soleLangTerm;	//the sole language translateion of the term chosen from map 
+				
+				//get the time interval 'xxxxx-xxxxx' in the 'definition', here the value of 'i' is got from findMapLang() in setHTML(response
+				definedTimeInterval = allPrefLabelTerms[i].parentNode.getElementsByTagName("skos:definition")[0].textContent;
+				bgn = definedTimeInterval.lastIndexOf(";")+2;
+				end = definedTimeInterval.length-3;
+				definedTimeInterval = definedTimeInterval.slice(bgn,end);	//cut and return the string 'xxxxx-xxxxx'
+				
+				//get the gssp page address
+				gsspPage = allPrefLabelTerms[i].parentNode.getElementsByTagName("gts:gsspInfo")[0].textContent;
+				if (gsspPage.lastIndexOf(":") > 0)   //the gssp page exists by checking 'http:'
+				{
+					end = gsspPage.lastIndexOf("[")-1;
+					gsspPage = gsspPage.slice(0,end);	//cut and return the string of http address
+					//replace the '-' with '&', because in the ontology file we replaced '&' with '-' due to the limition of xml
+					end = gsspPage.lastIndexOf("-");
+					//var tempStr1, tmpStr2,
+					if (end>0) //the page address contains '-'
+					{gsspPage = gsspPage.slice(0,end)+ '&' + gsspPage.slice(end+1,gsspPage.length);}
+					//if the page addres contains no '-', then no changes
+				}
+				else 
+				gsspPage = "";
+				
+				//get the AGI definition
+				agiDefinition = allPrefLabelTerms[i].parentNode.getElementsByTagName("rdfs:comment")[0].textContent;
+				
+				
+				///*13-dec-2010*/find the term in the given language and assign it to soleLangTerm
+				for(j=0; j<allPrefLabelTerms[i].parentNode.getElementsByTagName("skos:prefLabel").length; j++)
+				{
+					if(allPrefLabelTerms[i].parentNode.getElementsByTagName("skos:prefLabel")[j].attributes.getNamedItem("xml:lang").nodeValue == soleLang)
+					{
+						soleLangTerm = allPrefLabelTerms[i].parentNode.getElementsByTagName("skos:prefLabel")[j].textContent;
+						break;
+					}							
+				}	
+				
+				termToFlash = soleLangTerm; // termToFlash will be used for the flash animation. we
+											// will only use termToFlash when it is in english.
+				
+				termToContext = soleLangTerm+ 'p';
+				
+				//setup the WikiDefinition <div> and change the GTSDefinition <div>
+				if (soleLangTerm)
+				{	
+					var captTree, captDefinition, titleTerm1, titleTerm2,titleInterval, titleMnYear, titleOgn, titleSyno, titleWikinote;
+					var linkWikipedia, linkGsspPage;
+					var titleGssp;
+		
+					//set up the link to page in Wikipedia in the chosen language
+					linkWikipedia = "http://" + soleLang + ".wikipedia.org/wiki/" + soleLangTerm;
+					
+					if(soleLang == "en")
+						{
+							titleTerm1 = "Corresponding term in";
+							titleTerm2 = "International Stratigraphic Chart 2010:";
+							titleInterval = "indicates a time span of:";
+							titleMnYear = "million years ago";
+							titleOgn = "Original record:";
+							titleWikinote = "For information only";
+							titleGssp = '"Golden Spike"';
+						}				
+					
+					//set contents in the originalTerm div
+					document.getElementById('originalTerm').getElementsByTagName("em")[0].textContent = titleOgn;
+					document.getElementById('originalTerm').getElementsByTagName("h4")[0].textContent = GTSRcd;	//original record from map
+					
+					//set contents in the GTS defintion div	
+					document.getElementById('GTSDefinition').getElementsByTagName("em")[0].textContent = titleTerm1;
+					document.getElementById('GTSDefinition').getElementsByTagName("em")[1].textContent = titleTerm2;
+					document.getElementById('GTSDefinition').getElementsByTagName("em")[2].textContent = titleInterval;	
+					document.getElementById('GTSDefinition').getElementsByTagName("em")[3].textContent = "(" + definedTimeInterval + " " + titleMnYear + ")";	
+					document.getElementById('GTSDefinition').getElementsByTagName("h4")[0].textContent = soleLangTerm;
+					document.getElementById('GTSDefinition').getElementsByTagName("h4")[1].textContent = definedTimeInterval + " Ma";							
+					
+					//set contents in the Wiki defintion div	
+					document.getElementById('WikiDefinition').getElementsByTagName("a")[0].attributes.getNamedItem("href").nodeValue = linkWikipedia;
+					document.getElementById('WikiDefinition').getElementsByTagName("a")[0].textContent = "Wikipedia: " + soleLangTerm;
+					document.getElementById('WikiDefinition').getElementsByTagName("em")[0].textContent = titleWikinote;
+					
+					//set contents in the GSSP info div
+					if (gsspPage != "") //the gssp page of this term exists
+					{
+						document.getElementById('GsspInfo').getElementsByTagName("a")[0].attributes.getNamedItem("href").nodeValue = gsspPage;
+						document.getElementById('GsspInfo').getElementsByTagName("a")[0].textContent = "Basal GSSP: " + soleLangTerm;
+						document.getElementById('GsspInfo').getElementsByTagName("em")[0].textContent = titleGssp;
+					}
+					else
+					{
+						document.getElementById('GsspInfo').getElementsByTagName("p")[0].innerHTML = '<p>' + 'Basal GSSP of ' + '"' + soleLangTerm + '"' + '</p>';
+						document.getElementById('GsspInfo').getElementsByTagName("em")[0].textContent = "Not available or in ratification";
+					}
+					
+					//set the contents in the AGI definition div s
+					document.getElementById('AGIDefFrame').getElementsByTagName("em")[0].textContent = 'Definition of ' + '"' + soleLangTerm + '"';
+					document.getElementById('AGIDefinition').innerHTML = '<p>' + agiDefinition + '</p>';
+					
+					//if the orginal GTS record is a altLabel, i.e., a Synonym, then add an extra note
+					if(altLblIndr == 1)		
+					{
+						if(soleLang == "en")
+							titleSyno = "is a synonym";
+						
+						//set contents in the originalTerm div
+						document.getElementById('originalTerm').getElementsByTagName("em")[1].textContent = titleSyno;
+						
+						termToFlash += '$$'; //termToFlash will be sent to flash pie, '$' will be used as a label for marking the term found in the pie in a special color.
+					}
+				}
+			}
+
+			//change the table below the map and send query to thesaurus and show results in visualized div s (include the flash).
+			function queryUserInputTerm()
+			{
+				document.getElementById('nodelist').innerHTML = '<table border="1" cellpadding="3" cellspacing="0">\r<tbody><tr>\r<th class="nav"> </th>\r</tr><tr>\r<td> </td>\r</tr></tbody></table>'; //replace the nodelist with an empty table of one row and one column
+				document.getElementById('nodelist').getElementsByTagName("tbody")[0].getElementsByTagName("th")[0].firstChild.nodeValue = "User Input Term (not from map)";
+				document.getElementById('nodelist').getElementsByTagName("tbody")[0].getElementsByTagName("td")[0].firstChild.nodeValue = document.getElementById("userQueryTerm").value;
+				
+				/*The left code is same as setHTML(), but just hide the command to change the contents of table below the map
+				  and the tranlation language setting: here translate into english*/
+				//document.getElementById('nodelist').innerHTML = response.responseText;	//put results in the div
+				//alert(document.getElementById('nodelist').innerHTML);///////////////////
+				//clear the information of previous GTS terms in several <div>s -
+				document.getElementById('originalTerm').innerHTML = "<br /><em></em>\r<h4></h4>\r<em></em>";
+				document.getElementById('GTSDefinition').innerHTML = "<br /><em></em><br /><em></em>\r<h4></h4>\r<em></em>\r<h4></h4>\r<em></em>";
+				document.getElementById('WikiDefinition').innerHTML = '<p><a href="http://www.wikipedia.org" target="_blank">Wikipedia</a></p>\r<em></em>';
+				document.getElementById('GsspInfo').innerHTML = '<p><a href="https://engineering.purdue.edu/Stratigraphy/gssp/index.php?parentid=all" target="_blank">GSSP</a></p>\r<em></em>' ;
+	
+				document.getElementById('AGIDefFrame').innerHTML = "<br/><em></em>";
+				document.getElementById('AGIDefinition').innerHTML = '';
+				
+				
+				findMapLang();		//if can find map language (i.e., can find this GTS term in SKOS vocabulary), then MapLang will have a certain value
+				if(mapLang != null)
+					{
+						transTrigger = 1;
+						transGTS("en"); //whataver the language of the input term, we show tranlsation in english, but also with original term put there on user interface
+					}
+				else
+					transTrigger = 0;	//'transTrigger = 0' means cannot find this GTS term in SKOS vocabulary, then when user click lingual buttons, program will not run, see transGTS(langChosen)
+				
+				mapLang = null;		//clear the mapLang, in case the next click on map cannot find the record
+				
+				//for a english flash gtsTree we should send a english term to the tree
+				sendToActionScript(termToFlash)//animations in the flash //this is the only place we use termToFlash, when it is in english, as set 
+												// in above: transGTS("en");
+												
+				//termToContext = termToFlash + 'p';
+			}
+		
+		    //function for communication with Flash
+			function sendToActionScript(value) 
+			{
+				document["gtsOwl"].sendToActionScript(value); //The name gtsOwl is related to a lot, should check it with JVA-ACT communications
+				document["gtsIcile"].sendToActionScript(value);
+			}
+			 // sendToJavaScript is called in Flash when it passes a variable to the Javascript
+    		var returnedTermFromFlash;
+			var returnedTermArray = new Array();
+			var returnedTermFillColorArray = new Array();
+			
+			function sendToJavaScript(value) // the function sendToJavaScript() will be called in the gtsOwl and a variable will send back by 'value'
+			{
+				returnedTermFromFlash = value;
+				
+				if (returnedTermFromFlash.slice(returnedTermFromFlash.length-1, returnedTermFromFlash.length) == '@') //the request of this value is for query information, not for filter map
+				{
+					document.getElementById('userQueryTerm').value = returnedTermFromFlash.slice(0,returnedTermFromFlash.length-1); //get rid of the '@' and pass it to the text box for user input term query (below the pie)
+					queryUserInputTerm();
+					
+				}
+				else
+				{
+					returnedTermFromFlash = returnedTermFromFlash.toUpperCase();  // the request of this value is for filter map
+				
+					//alert (returnedTermFromFlash);
+					var params = {
+					VERSION: "1.1.1",
+					REQUEST: "GetStyles",					
+					EXCEPTIONS: "text/xml", 	//specify format for errors	
+					FORMAT: "text/xml",
+					LAYERS: "GBR_BGS_625k_BA"				
+					};
+				
+					OpenLayers.loadURL("http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?", params, this, getMapSLDForReDraw, getMapSLDForReDraw);
+				}
+			}
+			
+			function getMapSLDForReDraw(response)
+			{
+				var j,k;
+			
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].style.visibility="hidden";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = "";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = response.responseText;  //this is a tricky method to get the responsed text for later use with allGtsNames
+				
+				returnedTermArray = returnedTermFromFlash.split('#');
+				
+				var allGtsNames = document.getElementById('MapLegendBtns').getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("ogc:Literal"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+				for (j=0; j<returnedTermArray.length; j++)
+				{    //as already set in the gtsOwl, each term in the returnedTermArray will found a color in the Styles xml file from wms
+				     //because the filtered pie being clicked in the gtsOWL flash was filtered by the Styles xml file from wms
+					 // so all the terms in the gtsOWL flash can also be found in the Styles xml file from wms
+					for(k=0; k<allGtsNames.length; k++)
+					{   //one Array for the terms, and another array for the colors related to the terms respectively
+						if (returnedTermArray[j] == allGtsNames[k].textContent) //then get the color code for this term int he returned Styles from wms
+						{   //alert(returnedTermFromFlash);//////////////////////////
+							//chaos by using this sentence!!!!//returnedTermFillColor = document.getElementById('MapLegendBtns').getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Rule")[k].getElementsByTagName("CssParameter")[0].textContent;
+							returnedTermFillColorArray[j] = allGtsNames[k].parentNode.parentNode.parentNode.getElementsByTagName("CssParameter")[0].textContent;  //be careful with the inner structure of the returned XML of GetStyles request sent to WMS
+						break;
+						}
+					}
+				}
+				
+				if (returnedTermFillColorArray.length > 0)  //build the SLD_BODY file to be used for filtering the wms map
+				{
+					var sldBgn = '<?xml version="1.0" encoding="UTF-8"?><sld:StyledLayerDescriptor version="1.0.0" xmlns="http://www.opengis.net/ogc" xmlns:sld="http://www.opengis.net/sld" xmlns:ogc="http://www.opengis.net/ogc" xmlns:gml="http://www.opengis.net/gml" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd"><sld:NamedLayer><sld:Name>GBR_BGS_625k_BA</sld:Name><sld:UserStyle><sld:FeatureTypeStyle>';
+					var sldEnd = '</sld:FeatureTypeStyle></sld:UserStyle></sld:NamedLayer></sld:StyledLayerDescriptor>';
+				
+					var ptyEqualToNameBgn = '<sld:Rule><ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>';
+					var ptyEqualToNameEndValueBgn = '</ogc:PropertyName><ogc:Literal>';
+					var ptyEqualToVauleEndFillBgn = '</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter><sld:PolygonSymbolizer><sld:Fill><sld:CssParameter name="fill">';
+					var ptyEqualToFillEnd = '</sld:CssParameter><sld:CssParameter name="fill-opacity">1</sld:CssParameter></sld:Fill></sld:PolygonSymbolizer></sld:Rule>';
+					var filterByTermSpt;
+					var filterScriptsOfAllReturendTerms = '';
+					
+					for (j=0; j<returnedTermArray.length; j++)  //get the filter scripts of all returned terms
+					{
+						filterByTermSpt= ptyEqualToNameBgn + "AGE_ONEGL" + ptyEqualToNameEndValueBgn + returnedTermArray[j] + 
+											 ptyEqualToVauleEndFillBgn + returnedTermFillColorArray[j] + ptyEqualToFillEnd;  //get a part of the SLD_BODY text as a xml script
+				
+						filterScriptsOfAllReturendTerms += filterByTermSpt;
+					}
+					//alert (filterByTermSpt);
+					// here we can add more filterByTermSpt by adding term names and term fill colors in
+				
+					document.getElementById('filter').value = sldBgn+ filterScriptsOfAllReturendTerms + sldEnd;   //do not forget heard and tail, show the SLD_BODY xml in the textbox on user interface
+					updateFilter();  //filter the map
+				
+				}
+			}
+
+		</script>
+	</head>
+	
+	<body onLoad="init();">  <!-- overflow: auto-->
+		<h4>DEMO - Ontology-aided retrieval and exhibition of information stored in online geololgical maps&nbsp;<span class="copy">&copy;2011 Xiaogang Ma, ITC, University of Twente</span></h4>
+		
+		<div id="map" style="position: absolute; width: 470px; height: 600px; left: 5px; top: 35px; overflow: hidden; border: 1px solid black; ">			<!-- map placeholder -->
+        </div>	
+
+		<!-- nodelist placeholder -- note: .PNG is different from .png-->
+        <div id="nodelist" style="position: absolute; width: 470px; height: 76px; left: 5px; top: 636px; overflow: hidden; border: 1px solid black; text-align:center;">		
+        <br /><img border="0" src="http://localhost:8080/geoserver/img/click.PNG"/>  
+        </div>
+
+		<div id="MapLegendBtns" style="position: absolute; width: 470px; height: 120px; left: 5px; top: 713px; overflow: hidden; border: 1px solid black;text-align:center;">
+		<br /><input type="button" value="Map legend" onClick="popUpMapLegend();" />
+        &nbsp;&nbsp;<input type="button" value="See legend in GTS pie" onClick="seeLegendInFlash();" />
+        <br /><br />OGC SLD Filter:
+        <input type="text" size="60" id="filter"/>
+        <input type="button" value="Apply filter" onClick="updateFilter();" />
+        &nbsp;&nbsp;<input type="button" value="Reset filter" onClick="resetFilter();" />
+		<h4></h4>
+        </div>	        
+		
+		<div id="originalTerm" style="position: absolute; width: 380px; height: 125px; left: 476px; top: 35px; overflow: hidden; border: 1px solid black; text-align:center;">
+		<br /><em></em>
+		<h4></h4>
+		<em></em>
+		</div>
+		
+		<div id="GTSDefinition" style="position: absolute; width: 380px; height: 250px; left: 476px; top: 161px; overflow: hidden; border: 1px solid black; text-align:center;">
+		<br /><em></em><br />
+        <em></em>
+		<h4></h4>
+		<em></em>
+		<h4></h4>
+		<em></em>
+		</div>
+
+		<!--div for the title of AGI definition title-->
+		<div id="AGIDefFrame" style="position: absolute; width: 380px; height: 300px; left: 476px; top: 412px; overflow: hidden; border: 1px solid black; text-align:center;">
+        <br/><em></em>
+		</div>
+        
+		<!--div for the title of AGI definition content-->
+        <div id="AGIDefinition" style="position: absolute; width: 360px; height: 255px; left: 486px; top: 452px; overflow: hidden; border: 0px solid white; text-align:;left;">
+		</div>
+        
+        <!-- gssp information placeholder -->
+        <div id="GsspInfo" style="position: absolute; width: 320px; height: 60px; left: 476px; top: 713px; border: 1px solid black;text-align:center;">		
+        <p><a href="https://engineering.purdue.edu/Stratigraphy/gssp/index.php?parentid=all" target="_blank">GSSP</a></p>
+		<em></em>
+		</div>
+        
+        <!-- gssp image placeholder -->
+        <div id="GsspInfoImg" style="position: absolute; width: 59px; height: 60px; left: 797px; top: 713px; border: 1px solid black;text-align:center;">
+        <p><img border="0" src="http://localhost:8080/geoserver/img1/Spike.gif"/></p>	
+        </div>
+        
+        <!-- wiki information placeholder -->
+		<div id="WikiDefinition" style="position: absolute; width: 320px; height: 59px; left: 476px; top: 774px; border: 1px solid black;text-align:center;">		
+        <p><a href="http://www.wikipedia.org" target="_blank">Wikipedia</a></p>
+		<em></em>
+		</div>
+		
+        <!-- wiki image placeholder -->
+		<div id="WikiDefinitionImg" style="position: absolute; width: 59px; height: 59px; left: 797px; top: 774px; border: 1px solid black;text-align:center;">
+        <p><img border="0" src="http://localhost:8080/geoserver/img1/Wikipedia-logo.png"/></p>
+        </div>
+
+		<div id="IcicleFlashDiv" style="position: absolute; width: 150px; height: 677px; left: 857px; top: 35px; overflow: hidden; border: 1px solid black; text-align:center;">
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+				id="gtsIcile" width="146" height="675"
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+			<param name="movie" value="http://localhost:8080/geoserver/flash11/gtsIcile.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="always" />
+
+			<embed src="http://localhost:8080/geoserver/flash11/gtsIcile.swf" quality="high" bgcolor="#ffffff"
+				width="146" height="675" name="gtsIcile" align="middle"
+				play="true" loop="false" quality="high" allowScriptAccess="always"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.macromedia.com/go/getflashplayer">
+			</embed>
+		</object>		
+        </div>
+	
+		<div id="SunBurstFlashDiv" style="position: absolute; width: 662px; height: 677px; left: 1008px; top: 35px; overflow: hidden; border: 1px solid black; text-align:center;">		
+		<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000"
+				id="gtsOwl" width="662" height="662"
+				codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab">
+			<param name="movie" value="http://localhost:8080/geoserver/flash11/gtsOwl.swf" />
+			<param name="quality" value="high" />
+			<param name="bgcolor" value="#ffffff" />
+			<param name="allowScriptAccess" value="always" />
+
+			<embed src="http://localhost:8080/geoserver/flash11/gtsOwl.swf" quality="high" bgcolor="#ffffff"
+				width="662" height="662" name="gtsOwl" align="middle"
+				play="true" loop="false" quality="high" allowScriptAccess="always"
+				type="application/x-shockwave-flash"
+				pluginspage="http://www.macromedia.com/go/getflashplayer">
+			</embed>
+		</object>
+		</div>	
+
+		<div id="FlashCtrlBtns" style="position: absolute; width: 813px; height: 120px; left: 857px; top: 713px; overflow: hidden; border: 1px solid black; text-align:center;">
+		<form name="form1" onSubmit="return false;">
+			<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input id="userQueryTerm" type="text" name="input" value="" />
+			<input type="button" value="Query a term" onClick="queryUserInputTerm();" />
+			<input type="button" value="See term in GTS pie" onClick="sendToActionScript(termToContext);" />
+			<br /><br />
+			&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="button" value="Eonothem" onClick="sendToActionScript('Eonothem');" />
+			&nbsp;&nbsp;<input type="button" value="Erathem" onClick="sendToActionScript('Erathem');" />
+			&nbsp;&nbsp;<input type="button" value="System" onClick="sendToActionScript('System');" />
+			&nbsp;&nbsp;<input type="button" value="Subsystem" onClick="sendToActionScript('Subsystem');" />
+			&nbsp;&nbsp;<input type="button" value="Series" onClick="sendToActionScript('Series');" />
+			&nbsp;&nbsp;<input type="button" value="Stage" onClick="sendToActionScript('Stage');" />
+		</form>
+		</div>
+	</body>
+</html>

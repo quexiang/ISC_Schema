@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "Précambrien", "colour": "#F74370",
+		"children": [
+			{
+				"name": "Hadéen", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "Archéen", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "Éoarchéen", "colour": "#DA037F"
+					},	
+					{
+						"name": "Paléoarchéen", "colour": "#F4449F"
+					},	
+					{
+						"name": "Mésoarchéen", "colour": "#F768A9"
+					},	
+					{
+						"name": "Néoarchéen", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "Protérozoïque", "colour": "#F73563",
+				"children": [
+					{
+						"name": "Paléoprotérozoïque", "colour": "#F74370",
+						"children": [
+							{
+								"name": "Sidérien", "colour": "#F74F7C"
+							},
+							{
+								"name": "Rhyacien", "colour": "#F75B89"
+							},
+							{
+								"name": "Orosirien", "colour": "#F76898"
+							},
+							{
+								"name": "Stathérien", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "Mésoprotérozoïque", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "Calymnien", "colour": "#FDC07A"
+							},
+							{
+								"name": "Ectasien", "colour": "#FDCC8A"
+							},
+							{
+								"name": "Sténien", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "Néoprotérozoïque", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "Tonien", "colour": "#FEBF4E"
+							},
+							{
+								"name": "Cryogénien", "colour": "#FECC5C"
+							},
+							{
+								"name": "Édiacarien", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "Phanérozoïque", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "Paléozoïque", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "Cambrien", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "Terreneuvien", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "Fortunien", "colour": "#99B575"
+													},
+													{
+														"name": "Étage 2", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "Série 2", "colour": "#99C078",
+												"children": [
+													{
+														"name": "Étage 3", "colour": "#A6C583"
+													},
+													{
+														"name": "Étage 4", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "Série 3", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "Étage 5", "colour": "#B3D492"
+													},
+													{
+														"name": "Drumien", "colour": "#BFD99D"
+													},													
+													{
+														"name": "Guzhangien", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "Furongien", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "Paibien", "colour": "#CCEBAE"
+													},
+													{
+														"name": "Étage 9", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "Étage 10", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Ordovicien", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "Ordovicien inférieur", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "Trémadocien", "colour": "#33A97E"
+													},
+													{
+														"name": "Floien", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "Ordovicien moyen", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "Dapingien", "colour": "#66C092"
+													},
+													{
+														"name": "Darriwilien", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "Ordovicien supérieur", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "Sandbien", "colour": "#8CD094"
+													},
+													{
+														"name": "Katien", "colour": "#99D69F"
+													},													
+													{
+														"name": "Hirnantien", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Silurien", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "Llandovérien", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "Rhuddanien", "colour": "#A6DCB5"
+													},
+													{
+														"name": "Aéronien", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "Télychien", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "Wenlockien", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "Sheinwoodien", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "Homérien", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "Ludlowien", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "Gorstien", "colour": "#CCECDD"
+													},											
+													{
+														"name": "Ludfordien", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "Pridolien", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Dévonien", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "Dévonien inférieur", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "Lochkovien", "colour": "#E5B75A"
+													},
+													{
+														"name": "Praguien", "colour": "#E5C468"
+													},													
+													{
+														"name": "Emsien", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "Dévonien moyen", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "Eifelien", "colour": "#F1D576"
+													},
+													{
+														"name": "Givétien", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "Dévonien supérieur", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "Frasnien", "colour": "#F2EDAD"
+													},
+													{
+														"name": "Famennien", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Carbonifère", "colour": "#67A599",
+								"children": [
+									{
+										"name": "Mississippien", "colour": "#678F66",
+										"children": [
+											{
+												"name": "Mississippien inférieur", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "Tournaisien", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "Mississippien moyen", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "Viséen", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "Mississippien supérieur", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "Serpoukhovien", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "Pennsylvanien", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "Pennsylvanien inférieur", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "Bashkirien", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "Pennsylvanien moyen", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "Moscovien", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "Pennsylvanien supérieur", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "Kazimovien", "colour": "#BFD0C5"
+													},
+													{
+														"name": "Gzhélien", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "Permien", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "Cisuralien", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "Assélien", "colour": "#E36350"
+													},
+													{
+														"name": "Sakmarien", "colour": "#E36F5C"
+													},
+													{
+														"name": "Artinskien", "colour": "#E37B68"
+													},													
+													{
+														"name": "Kungurien", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "Guadalupéen", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "Roadien", "colour": "#FB8069"
+													},
+													{
+														"name": "Wordien", "colour": "#FB8D76"
+													},
+													{
+														"name": "Capitanien", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "Lopingien", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "Wuchiapingien", "colour": "#FCB4A2"
+													},
+													{
+														"name": "Changhsingien", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "Mésozoïque", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "Trias", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "Trias inférieur", "colour": "#983999",
+												"children": [
+													{
+														"name": "Indusien", "colour": "#A4469F"
+													},
+													{
+														"name": "Olenekien", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "Trias moyen", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "Anisien", "colour": "#BC75B7"
+													},
+													{
+														"name": "Ladinien", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "Trias supérieur", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "Carnien", "colour": "#C99BC9"
+													},
+													{
+														"name": "Norien", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "Rhétien", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Jurassique", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "Jurassique inférieur", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "Hettangien", "colour": "#4EB3D3"
+													},
+													{
+														"name": "Sinémurien", "colour": "#67BCD8"
+													},
+													{
+														"name": "Pliensbachien", "colour": "#80C5DD"
+													},													
+													{
+														"name": "Toarcien", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "Jurassique moyen", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "Aalénien", "colour": "#A6D9DD"
+													},
+													{
+														"name": "Bajocien", "colour": "#A6DDE0"
+													},
+													{
+														"name": "Bathonien", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "Callovien", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "Jurassique supérieur", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "Oxfordien", "colour": "#BFE7F1"
+													},
+													{
+														"name": "Kimméridgien", "colour": "#CCECF4"
+													},
+													{
+														"name": "Tithonien", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Crétacé", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "Crétacé inférieur", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "Berriasien", "colour": "#8CCD60"
+													},
+													{
+														"name": "Valanginien", "colour": "#99D36A"
+													},
+													{
+														"name": "Hauterivien", "colour": "#A6D975"
+													},
+													{
+														"name": "Barrémien", "colour": "#B3DF7F"
+													},
+													{
+														"name": "Aptien", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "Albien", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "Crétacé supérieur", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "Cénomanien", "colour": "#B3DE53"
+													},
+													{
+														"name": "Turonien", "colour": "#BFE35D"
+													},
+													{
+														"name": "Coniacien", "colour": "#CCE968"
+													},
+													{
+														"name": "Santonien", "colour": "#D9EF74"
+													},
+													{
+														"name": "Campanien", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "Maastrichtien", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "Cénozoique", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "Paléogène", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "Paléocène", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "Danien", "colour": "#FDB462"
+													},
+													{
+														"name": "Sélandien", "colour": "#FEBF65"
+													},
+													{
+														"name": "Thanétien", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "Éocène", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "Yprésien", "colour": "#FCA773"
+													},
+													{
+														"name": "Lutétien", "colour": "#FCB482"
+													},
+													{
+														"name": "Bartonien", "colour": "#FDC091"
+													},													
+													{
+														"name": "Priabonien", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "Oligocène", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "Rupélien", "colour": "#FED99A"
+													},
+													{
+														"name": "Chattien", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Néogène", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "Miocène", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "Aquitanien", "colour": "#FFFF33"
+													},
+													{
+														"name": "Burdigalien", "colour": "#FFFF41"
+													},
+													{
+														"name": "Langhien", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "Serravallien", "colour": "#FFFF59"
+													},
+													{
+														"name": "Tortonien", "colour": "#FFFF66"
+													},														
+													{
+														"name": "Messinien", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "Pliocène", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "Zancléen", "colour": "#FFFFB3"
+													},
+													{
+														"name": "Plaisancien", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "Quaternaire", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "Pléistocène", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "Gélasien", "colour": "#FFEDB3"
+													},
+													{
+														"name": "Calabrien", "colour": "#FFF2BA"
+													},
+													{
+														"name": "\"Ionien\"", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "Pléistocène supérieur", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "Holocène", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

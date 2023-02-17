@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "Präkambrium", "colour": "#F74370",
+		"children": [
+			{
+				"name": "Hadaikum", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "Archaikum", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "Eoarchaikum", "colour": "#DA037F"
+					},	
+					{
+						"name": "Paläoarchaikum", "colour": "#F4449F"
+					},	
+					{
+						"name": "Mesoarchaikum", "colour": "#F768A9"
+					},	
+					{
+						"name": "Neoarchaikum", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "Proterozoikum", "colour": "#F73563",
+				"children": [
+					{
+						"name": "Paläoproterozoikum", "colour": "#F74370",
+						"children": [
+							{
+								"name": "Siderium", "colour": "#F74F7C"
+							},
+							{
+								"name": "Rhyacium", "colour": "#F75B89"
+							},
+							{
+								"name": "Orosirium", "colour": "#F76898"
+							},
+							{
+								"name": "Statherium", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "Mesoproterozoikum", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "Calymmium", "colour": "#FDC07A"
+							},
+							{
+								"name": "Ectasium", "colour": "#FDCC8A"
+							},
+							{
+								"name": "Stenium", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "Neoproterozoikum", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "Tonium", "colour": "#FEBF4E"
+							},
+							{
+								"name": "Cryogenium", "colour": "#FECC5C"
+							},
+							{
+								"name": "Ediacarium", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "Phanerozoikum", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "Paläozoikum", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "Kambrium", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "Terreneuvium", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "Fortunium", "colour": "#99B575"
+													},
+													{
+														"name": "2. Stufe", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "2. Serie", "colour": "#99C078",
+												"children": [
+													{
+														"name": "3. Stufe", "colour": "#A6C583"
+													},
+													{
+														"name": "4. Stufe", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "3. Serie", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "5. Stufe", "colour": "#B3D492"
+													},
+													{
+														"name": "Drumium", "colour": "#BFD99D"
+													},													
+													{
+														"name": "Guzhangium", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "Furongium", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "Paibium", "colour": "#CCEBAE"
+													},
+													{
+														"name": "9. Stufe", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "10. Stufe", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Ordovizium", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "Unterordovizium", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "Tremadocium", "colour": "#33A97E"
+													},
+													{
+														"name": "Floium", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "Mittelordovizium", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "Dapingium", "colour": "#66C092"
+													},
+													{
+														"name": "Darriwilium", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "Oberordovizium", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "Sandbium", "colour": "#8CD094"
+													},
+													{
+														"name": "Katium", "colour": "#99D69F"
+													},													
+													{
+														"name": "Hirnantium", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Silur", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "Llandovery", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "Rhuddanium", "colour": "#A6DCB5"
+													},
+													{
+														"name": "Aeronium", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "Telychium", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "Wenlock", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "Sheinwoodium", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "Homerium", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "Ludlow", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "Gorstium", "colour": "#CCECDD"
+													},											
+													{
+														"name": "Ludfordium", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "Pridolium", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Devon", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "Unterdevon", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "Lochkovium", "colour": "#E5B75A"
+													},
+													{
+														"name": "Pragium", "colour": "#E5C468"
+													},													
+													{
+														"name": "Emsium", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "Mitteldevon", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "Eifelium", "colour": "#F1D576"
+													},
+													{
+														"name": "Givetium", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "Oberdevon", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "Frasnium", "colour": "#F2EDAD"
+													},
+													{
+														"name": "Famennium", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Karbon", "colour": "#67A599",
+								"children": [
+									{
+										"name": "Mississippium", "colour": "#678F66",
+										"children": [
+											{
+												"name": "Untermississippium", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "Tournaisium", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "Mittelmississippium", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "Viséum", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "Obermississippium", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "Serpukhovium", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "Pennsylvanium", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "Unterpennsylvanium", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "Bashkirium", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "Mittelpennsylvanium", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "Moscovium", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "Oberpennsylvanium", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "Kasimovium", "colour": "#BFD0C5"
+													},
+													{
+														"name": "Gzhelium", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "Perm", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "Cisuralium", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "Asselium", "colour": "#E36350"
+													},
+													{
+														"name": "Sakmarium", "colour": "#E36F5C"
+													},
+													{
+														"name": "Artinskium", "colour": "#E37B68"
+													},													
+													{
+														"name": "Kungurium", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "Guadalupium", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "Roadium", "colour": "#FB8069"
+													},
+													{
+														"name": "Wordium", "colour": "#FB8D76"
+													},
+													{
+														"name": "Capitanium", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "Lopingium", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "Wuchiapingium", "colour": "#FCB4A2"
+													},
+													{
+														"name": "Changhsingium", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "Mesozoikum", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "Trias", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "Untertrias", "colour": "#983999",
+												"children": [
+													{
+														"name": "Indusium", "colour": "#A4469F"
+													},
+													{
+														"name": "Olenekium", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "Mitteltrias", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "Anisium", "colour": "#BC75B7"
+													},
+													{
+														"name": "Ladinium", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "Obertrias", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "Carnium", "colour": "#C99BC9"
+													},
+													{
+														"name": "Norium", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "Rhaetium", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Jura", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "Unterjura", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "Hettangium", "colour": "#4EB3D3"
+													},
+													{
+														"name": "Sinemurium", "colour": "#67BCD8"
+													},
+													{
+														"name": "Pliensbachium", "colour": "#80C5DD"
+													},													
+													{
+														"name": "Toarcium", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "Mitteljura", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "Aalenium", "colour": "#A6D9DD"
+													},
+													{
+														"name": "Bajocium", "colour": "#A6DDE0"
+													},
+													{
+														"name": "Bathonium", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "Callovium", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "Oberjura", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "Oxfordium", "colour": "#BFE7F1"
+													},
+													{
+														"name": "Kimmeridgium", "colour": "#CCECF4"
+													},
+													{
+														"name": "Tithonium", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Kreide", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "Unterkreide", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "Berriasium", "colour": "#8CCD60"
+													},
+													{
+														"name": "Valanginium", "colour": "#99D36A"
+													},
+													{
+														"name": "Hauterivium", "colour": "#A6D975"
+													},
+													{
+														"name": "Barremium", "colour": "#B3DF7F"
+													},
+													{
+														"name": "Aptium", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "Albium", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "Oberkreide", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "Cenomanium", "colour": "#B3DE53"
+													},
+													{
+														"name": "Turonium", "colour": "#BFE35D"
+													},
+													{
+														"name": "Coniacium", "colour": "#CCE968"
+													},
+													{
+														"name": "Santonium", "colour": "#D9EF74"
+													},
+													{
+														"name": "Campanium", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "Maastrichtium", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "Känozoikum", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "Paläogen", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "Paläozän", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "Danium", "colour": "#FDB462"
+													},
+													{
+														"name": "Selandium", "colour": "#FEBF65"
+													},
+													{
+														"name": "Thanetium", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "Eozän", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "Ypresium", "colour": "#FCA773"
+													},
+													{
+														"name": "Lutetium", "colour": "#FCB482"
+													},
+													{
+														"name": "Bartonium", "colour": "#FDC091"
+													},													
+													{
+														"name": "Priabonium", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "Oligozän", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "Rupelium", "colour": "#FED99A"
+													},
+													{
+														"name": "Chattium", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Neogen", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "Miozän", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "Aquitanium", "colour": "#FFFF33"
+													},
+													{
+														"name": "Burdigalium", "colour": "#FFFF41"
+													},
+													{
+														"name": "Langhium", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "Serravallium", "colour": "#FFFF59"
+													},
+													{
+														"name": "Tortonium", "colour": "#FFFF66"
+													},														
+													{
+														"name": "Messinium", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "Pliozän", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "Zancleum", "colour": "#FFFFB3"
+													},
+													{
+														"name": "Piacenzium", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "Quartär", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "Pleistozän", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "Gelasium", "colour": "#FFEDB3"
+													},
+													{
+														"name": "Calabrium", "colour": "#FFF2BA"
+													},
+													{
+														"name": "\"Ionium\"", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "Oberpleistozän", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "Holozän", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

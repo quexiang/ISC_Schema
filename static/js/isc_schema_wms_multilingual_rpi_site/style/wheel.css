@@ -1,0 +1,28 @@
+path {
+  stroke: #000;
+  stroke-width: 1;
+  cursor: pointer;
+}
+
+text {
+  font-size: 4px; 
+  font-family: sans-serif, microsoft yahei;
+  cursor: pointer;
+}
+
+body {
+  width: 780px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+  margin: .5em 0;
+}
+
+p#intro {
+  text-align: center;
+  margin: 1em 0;
+}
+
+#breadcrumbs { display: none; }

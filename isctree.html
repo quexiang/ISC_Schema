@@ -1,0 +1,329 @@
+﻿<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Geological Time Pie</title>
+<meta name="description" content="A visualisation of geological time.">
+<link rel="stylesheet" href="../static/js/isc_schema_wms_multilingual_rpi_site/style/style.css">
+<link href="../static/js/isc_schema_wms_multilingual_rpi_site/style/wheel.css" rel="stylesheet">
+
+<body onLoad="init();">
+<div id="vis" style="position: absolute; left: 2px; top: 2px; overflow: hidden; border: 1px solid black; text-align:center;"></div>
+
+<div id="ChangeLanguageBtns" style="position: absolute; width: 549px; height: 30px; left: 2px; top: 845px; overflow: hidden; border: 1px solid black; text-align:center;">
+		<input type="button" value="English" onClick="loadEN();" />
+		<input type="button" value="Español" onClick="loadES();" />
+		<input type="button" value="Deutsch" onClick="loadDE();" />
+		<input type="button" value="Français" onClick="loadFR();" />
+		<input type="button" value="Nederlands" onClick="loadNL();" />
+		<input type="button" value="日本語" onClick="loadJP();" />
+		<input type="button" value="中文" onClick="loadCN();" />
+	<h4></h4>
+</div>
+
+<div id="SwitchClickFunction" style="position: absolute; width: 270px; height: 30px; left: 552px; top: 845px; overflow: hidden; border: 1px solid black;text-align:center;">
+	<input type="text" size="20" id="filterSLDtoWMS"/>
+	<input type="button" value="SLD->Map" onClick="updateFilterSLDtoWMS();" />
+	<h4></h4>
+</div>	
+
+<div id="DBpediaImg" style="position: absolute; width: 130px; height: 82px; left: 823px; top: 2px; border: 1px solid black; text-align:center; vertical-align:middle;">
+<img border="0" src="../static/js/isc_schema_wms_multilingual_rpi_site/img/dbpd.png"/>
+</div>
+
+<div id="DBpediaLink" style="position: absolute; width: 269px; height: 82px; left: 954px; top: 2px; border: 1px solid black; text-align:center; vertical-align:middle;">
+<br /><a href="http://www.dbpedia.org" target="_blank">DBpedia</a>
+</div>
+
+<div id="DBpediaQuery" style="position: absolute; width: 400px; height: 634px; left: 823px; top: 85px;  border: 1px solid black; text-align:center; overflow: auto;">
+</div>	 
+
+<div id="WikiDefinitionImg" style="position: absolute; width: 105px; height: 80px; left: 823px; top: 720px; border: 1px solid black;text-align:center; vertical-align:middle;">
+<img border="0" src="../static/js/isc_schema_wms_multilingual_rpi_site/img/wiki.png"/>
+</div>
+
+<div id="WikipediaLink" style="position: absolute; width: 294px; height: 80px; left: 929px; top: 720px;  border: 1px solid black; text-align:center; vertical-align:middle; overflow: auto;">
+<br /><a href="http://www.wikipedia.org" target="_blank">Wikipedia</a>
+</div>	 
+
+<div id="GeoscimlImg" style="position: absolute; width: 105px; height: 74px; left: 823px; top: 801px; border: 1px solid black;text-align:center; vertical-align:middle;">
+<img border="0" src="../static/js/isc_schema_wms_multilingual_rpi_site/img/geosciml.png"/>
+</div>
+
+<div id="GeoscimlLink" style="position: absolute; width: 294px; height: 74px; left: 929px; top: 801px;  border: 1px solid black; text-align:center; vertical-align:middle; overflow: auto;">
+<br /><a href="http://resource.geosciml.org/classifierscheme/ics/ischart/2010" target="_blank">GeoSciML Vocabulary</a>
+</div>	
+
+<div id="map" style="position: absolute; width: 690px; height: 717px; left: 1224px; top: 2px; overflow: hidden; border: 1px solid black; ">			<!-- map placeholder -->
+</div>	
+
+<div id="nodelist" style="position: absolute; width: 690px; height: 93px; left: 1224px; top: 720px; overflow: hidden; border: 1px solid black; text-align:center;">		
+</div>
+
+<div id="LabelQueryBtns" style="position: absolute; width: 690px; height: 30px; left: 1224px; top: 814px; overflow: hidden; border: 1px solid black;text-align:center;">
+	<input type="text" size="55" id="gtsLabelQuery"/>
+	<input type="button" value="Label->Viz&SPRQL" onClick="queryLabelInVis();" />
+</div>
+
+<div id="MapLegendBtns" style="position: absolute; width: 690px; height: 30px; left: 1224px; top: 845px; overflow: hidden; border: 1px solid black;text-align:center;">
+	<input type="button" value="WMS->SLD" onClick="PopupSLD();" />
+	<input type="button" value="WMS->SLD->Viz" onClick="seeLegendInVis();" />
+	<input type="text" size="55" id="filter"/>
+	<input type="button" value="SLD->Viz" onClick="sendSldToVis();" />
+	<h4></h4>
+</div>	
+
+
+</body>
+
+<script language="javascript" src="../static/js/isc_schema_wms_multilingual_rpi_site/d3lib/d3.v2.js"></script>
+<script language="javascript" src="../static/js/isc_schema_wms_multilingual_rpi_site/iscwheel.js"></script>
+<script language="javascript" src="../static/js/isc_schema_wms_multilingual_rpi_site/openlayers/OpenLayers.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.js"></script>  
+
+<script language="javascript"> 
+
+	var sldInfo = "";
+	var GTSRcd;					//record of geological time scale in the table 'featureInfo' returned by the click on the map
+	var GTSLabel;   //label of gts term input by user
+			//Load the map from WMS provided by GeoServer
+			var map;
+            var ukbedrockageTiled;
+			var ukbedrockageUntiled;
+
+            // pink tile avoidance
+            OpenLayers.IMAGE_RELOAD_ATTEMPTS = 5;
+            // make OL compute scale according to WMS spec
+            OpenLayers.DOTS_PER_INCH = 25.4 / 0.28;
+        
+            function init(){		//JavaScript function
+                // if this is just a coverage or a group of them, disable a few items,
+                // and default to jpeg format
+				
+				OpenLayers.ProxyHost = "geoproxy.php?url=";
+				//OpenLayers.ProxyHost = "/cgi-bin/proxy2.cgi?url=";
+				//OpenLayers.ProxyHost = "http://localhost:8080/geoserver/rest/proxy?url=";
+            
+                var bounds = new OpenLayers.Bounds(
+				//-7.03522728,54.96973100,0.555681807,55.72768555
+				-11.03522728,50.96973100,2.055681807,56.72768555
+                );
+				
+                var options = {
+                    controls: [],
+                    maxExtent: bounds,
+                    maxResolution: 32,
+                    projection: "EPSG:4326",
+                    units: 'm'
+                };
+                map = new OpenLayers.Map('map', options);	//make 'map' object
+				
+				var baselayer_wms = new OpenLayers.Layer.WMS(
+				//"BMNG", "http://mapsone.brgm.fr/bmng?map=/applications/mapserver/mapFiles/bmng.map",
+				"BMNG", "http://mapsone.brgm.fr/bmng?map=/applications/mapserver/mapFiles/bmng.map",
+				{layers: 'bmng'}, 
+				{'isBaseLayer':true,	        
+				 'singleTile':true,
+				 transparent: true,
+				 'ratio':1
+				 }
+				);
+				ukbedrockageTiled = new OpenLayers.Layer.WMS(
+				    "GBR BGS 1:625k Bedrock Age Tiled", "http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms",
+                    {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: '512',
+                        width: '278',
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png',
+                        tiled: 'true',
+                        tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom
+                    },
+                    {
+                        buffer: 0,
+                        displayOutsideMaxExtent: true
+                    } 
+				);				
+                // setup ukbedrockageUntiled layer
+                ukbedrockageUntiled = new OpenLayers.Layer.WMS(			//define WMS layer
+                    "GBR BGS 1:625k Bedrock Age Untiled", "http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms",	//assign a layer name, base URL for WMS
+                    {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: '512',
+                        width: '278',
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png'
+                    },
+                    {
+                        singleTile: true, ratio: 1
+                    } 
+                );
+    
+                map.addLayers([baselayer_wms, ukbedrockageUntiled, ukbedrockageTiled]);		//add layers to map object
+
+                // build up all controls            
+                map.addControl(new OpenLayers.Control.PanZoomBar({
+                    position: new OpenLayers.Pixel(2, 15)
+                }));
+                map.addControl(new OpenLayers.Control.Navigation());
+               // map.addControl(new OpenLayers.Control.Scale($('scale')));
+               // map.addControl(new OpenLayers.Control.MousePosition({element: $('location')}));
+				//map.addControl(new OpenLayers.Control.LayerSwitcher());
+				//map.addControl(new OpenLayers.Control.OverviewMap());
+				map.zoomToExtent(bounds);		//zoom to the bounds of the layers
+                //map.zoomToMaxExtent();
+                // support GetFeatureInfo
+                // support GetFeatureInfo
+                map.events.register('click', map, function (e) {
+                    document.getElementById('nodelist').innerHTML = "Loading... please wait...";
+                    var params = {
+                        SERVICE: "WMS",
+						VERSION: "1.1.1",
+						height: map.size.h,
+                        width: map.size.w,
+                        layers: 'GBR_BGS_625k_BA',			//layers requested
+                        styles: '',
+						transparent: true,
+                        srs: 'EPSG:4326',
+                        format: 'image/png',
+						tiled: 'true',
+                        tilesOrigin : map.maxExtent.left + ',' + map.maxExtent.bottom,	
+						
+                        REQUEST: "GetFeatureInfo",
+                        EXCEPTION: "text/xml",
+                        BBOX: map.getExtent().toBBOX(),
+                        X: e.xy.x,
+                        Y: e.xy.y,
+                        INFO_FORMAT: "text/html",
+                        QUERY_LAYERS: 'GBR_BGS_625k_BA',
+						//map.layers[1].params.layers,
+                        FEATURE_COUNT: 1                       
+                        };
+						
+                    OpenLayers.loadURL("http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?", params, this, setHTML, setHTML);
+                    OpenLayers.Event.stop(e);
+				});
+			}
+			
+            //sets the HTML provided into the nodelist element    //will run when results come back
+            function setHTML(response)
+			{	
+                document.getElementById('nodelist').innerHTML = response.responseText;	//put results in the div
+ 				GTSRcd = document.getElementById('nodelist').getElementsByTagName("tbody")[0].getElementsByTagName("td")[0].firstChild.nodeValue;				
+				GTSRcd = changeCase(GTSRcd);
+				hightlightLabel(GTSRcd);
+            }			
+
+			function changeCase(frmObj) //turn original string into such a style: the first character of each word in upper case, the other characters in the same word in lower case
+			{<!--????????-->
+				var index;<!--????-->
+				var tmpStr;<!--????,???????-->
+				var tmpChar;<!--????,??????-->
+				var preString;<!--????,???????-->
+				var postString;<!--????,???????-->
+				var strlen;<!--????,????????-->
+				tmpStr = frmObj.toLowerCase();<!--??????????????-->
+				strLen = tmpStr.length;<!--????????????-->
+				if (strLen > 0)  
+				{<!--?????????????-->
+					for (index = 0; index < strLen; index++)  
+					{<!--???????????-->
+						if (index == 0)  
+						{<!--????????-->
+							tmpChar = tmpStr.substring(0,1).toUpperCase();<!--??????????</b>-->
+							postString = tmpStr.substring(1,strLen);<!--??????????-->
+							tmpStr = tmpChar + postString;<!--?????????,??????????</b>-->
+						}
+						else 
+						{
+							tmpChar = tmpStr.substring(index, index+1);<!--??????-->
+							if (tmpChar == " " && index < (strLen-1))  
+							{<!--?????????,????????,??????????????????-->
+								tmpChar = tmpStr.substring(index+1, index+2).toUpperCase();<!--???????,???????</b>-->
+								preString = tmpStr.substring(0, index+1);<!--?????????????-->
+								postString = tmpStr.substring(index+2,strLen);<!--?????????????-->
+								tmpStr = preString + tmpChar + postString;<!--????????-->
+							}
+						}
+					}
+				}
+				return tmpStr;<!--??????????-->
+			}
+	
+	function PopupSLD()   //sld file of the uk 625k bed rock age WMS layer -- this function is OK without a proxy server
+	{
+		var url = "http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?service=WMS&version=1.1.1&request=GetStyles&layers=GBR_BGS_625k_BA&format=text/xml";
+		window.open(url, "mywindow", "location=0,status=0,scrollbars=0,width=460,height=200");
+	}
+	
+	function seeLegendInVis() //use the GetStyles command of WMS to get the SLD file of a map --- this function needs a proxy server
+	{
+		var params = {
+		VERSION: "1.1.1",
+		REQUEST: "GetStyles",					
+        EXCEPTIONS: "text/xml", 	//specify format for errors	
+		FORMAT: "text/xml",
+		LAYERS: "GBR_BGS_625k_BA"				
+	  };
+				
+		OpenLayers.loadURL("http://ogc.bgs.ac.uk/cgi-bin/BGS_Bedrock_and_Superficial_Geology/wms?", params, this, getMapSLD, getMapSLD);		
+	}
+
+	function getMapSLD(response)
+		{
+			var k;
+			var gtsNameGrpToVis = ""; //dont place a space in gtsNameGrpToVis here
+			
+			//alert(response.responseText);
+			//sldInfo = response.responseText;  
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].style.visibility="hidden";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = "";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = response.responseText;  //this is a tricky method to get the responsed text for later use with allGtsNames
+ 				document.getElementById('filter').value = document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML;
+				//var sldXML = response.responseText;
+				//alert(sldXML);//////////////////////////////////////////////////////////
+				//send a group of values to Flash
+				var allGtsNames = document.getElementById('MapLegendBtns').getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Name"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+						
+			
+			//var allGtsNames = sldInfo.getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Name"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+				for(k=0; k<allGtsNames.length; k++)
+				{
+					gtsNameGrpToVis = gtsNameGrpToVis + changeCase(allGtsNames[k].textContent) + "#";
+				}
+				showlegend(gtsNameGrpToVis); //pass the long string to flash
+		}	
+		
+	function sendSldToVis(){
+		var k;
+		var gtsNameGrpToVis = "";
+	
+					document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].style.visibility="hidden";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = "";
+				document.getElementById('MapLegendBtns').getElementsByTagName("h4")[0].innerHTML = document.getElementById('filter').value;
+					
+					var allGtsNames = document.getElementById('MapLegendBtns').getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Name"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+						
+			
+			//var allGtsNames = sldInfo.getElementsByTagName("FeatureTypeStyle")[0].getElementsByTagName("Name"); // we assume the  records with tag 'Name' stand for all and only the GTS terms included in the map
+				for(k=0; k<allGtsNames.length; k++)
+				{
+					gtsNameGrpToVis = gtsNameGrpToVis + changeCase(allGtsNames[k].textContent) + "#";
+				}
+				showlegend(gtsNameGrpToVis); //pass the long string to flash
+	}	
+	
+	function queryLabelInVis()
+	{
+		GTSLabel = document.getElementById('gtsLabelQuery').value;
+		GTSLabel = changeCase(GTSLabel);
+		hightlightLabel(GTSLabel);
+	}
+
+</script>

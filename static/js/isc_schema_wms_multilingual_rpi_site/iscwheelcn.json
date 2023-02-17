@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "前寒武纪", "colour": "#F74370",
+		"children": [
+			{
+				"name": "冥古宙", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "太古宙", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "始太古代", "colour": "#DA037F"
+					},	
+					{
+						"name": "古太古代", "colour": "#F4449F"
+					},	
+					{
+						"name": "中太古代", "colour": "#F768A9"
+					},	
+					{
+						"name": "新太古代", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "元古宙", "colour": "#F73563",
+				"children": [
+					{
+						"name": "古元古代", "colour": "#F74370",
+						"children": [
+							{
+								"name": "成铁纪", "colour": "#F74F7C"
+							},
+							{
+								"name": "层侵纪", "colour": "#F75B89"
+							},
+							{
+								"name": "造山纪", "colour": "#F76898"
+							},
+							{
+								"name": "固结纪", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "中元古代", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "盖层纪", "colour": "#FDC07A"
+							},
+							{
+								"name": "延展纪", "colour": "#FDCC8A"
+							},
+							{
+								"name": "狭带纪", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "新元古代", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "拉伸纪", "colour": "#FEBF4E"
+							},
+							{
+								"name": "成冰纪", "colour": "#FECC5C"
+							},
+							{
+								"name": "埃迪卡拉纪", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "显生宙", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "古生代", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "寒武纪", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "纽芬兰世", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "好运期", "colour": "#99B575"
+													},
+													{
+														"name": "第二期", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "第二世", "colour": "#99C078",
+												"children": [
+													{
+														"name": "第三期", "colour": "#A6C583"
+													},
+													{
+														"name": "第四期", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "第三世", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "第五期", "colour": "#B3D492"
+													},
+													{
+														"name": "鼓山期", "colour": "#BFD99D"
+													},													
+													{
+														"name": "古丈期", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "芙蓉世", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "排碧期", "colour": "#CCEBAE"
+													},
+													{
+														"name": "第九期", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "第十期", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "奥陶纪", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "早奥陶世", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "特马豆克期", "colour": "#33A97E"
+													},
+													{
+														"name": "弗洛期", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "中奥陶世", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "达瑞威尔期", "colour": "#66C092"
+													},
+													{
+														"name": "达瑞威尔期", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "晚奥陶世", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "桑比期", "colour": "#8CD094"
+													},
+													{
+														"name": "凯迪期", "colour": "#99D69F"
+													},													
+													{
+														"name": "赫南特期", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "志留纪", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "兰多维列世", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "鲁丹期", "colour": "#A6DCB5"
+													},
+													{
+														"name": "埃隆期", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "特列奇期", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "温洛克世", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "申伍德期", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "侯默期", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "卢德洛世", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "格斯特期", "colour": "#CCECDD"
+													},											
+													{
+														"name": "卢德福德期", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "普里多利世", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "泥盆纪", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "早泥盆世", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "洛赫科夫期", "colour": "#E5B75A"
+													},
+													{
+														"name": "布拉格期", "colour": "#E5C468"
+													},													
+													{
+														"name": "艾姆斯期", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "中泥盆世", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "艾菲尔期", "colour": "#F1D576"
+													},
+													{
+														"name": "吉维特期", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "晚泥盆世", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "弗拉斯期", "colour": "#F2EDAD"
+													},
+													{
+														"name": "法门期", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "石炭纪", "colour": "#67A599",
+								"children": [
+									{
+										"name": "密西西比亚纪", "colour": "#678F66",
+										"children": [
+											{
+												"name": "早密西西比世", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "杜内期", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "中密西西比世", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "韦宪期", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "晚密西西比世", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "谢尔普霍夫期", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "宾夕法尼亚亚纪", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "早宾夕法尼亚世", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "巴什基尔期", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "中宾夕法尼亚世", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "莫斯科期", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "晚宾夕法尼亚世", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "卡西莫夫期", "colour": "#BFD0C5"
+													},
+													{
+														"name": "格热尔期", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "二叠纪", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "乌拉尔世", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "阿瑟尔期", "colour": "#E36350"
+													},
+													{
+														"name": "萨克马尔期", "colour": "#E36F5C"
+													},
+													{
+														"name": "亚丁斯克期", "colour": "#E37B68"
+													},													
+													{
+														"name": "孔古尔期", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "瓜德鲁普世", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "罗德期", "colour": "#FB8069"
+													},
+													{
+														"name": "沃德期", "colour": "#FB8D76"
+													},
+													{
+														"name": "卡匹敦期", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "乐平世", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "吴家坪期", "colour": "#FCB4A2"
+													},
+													{
+														"name": "长兴期", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "中生代", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "三叠纪", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "早三叠世", "colour": "#983999",
+												"children": [
+													{
+														"name": "印度期", "colour": "#A4469F"
+													},
+													{
+														"name": "奥伦尼克期", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "中三叠世", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "安尼期", "colour": "#BC75B7"
+													},
+													{
+														"name": "拉迪尼亚期", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "晚三叠世", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "卡尼期", "colour": "#C99BC9"
+													},
+													{
+														"name": "诺利克期", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "瑞替期", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "侏罗纪", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "早侏罗世", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "赫唐期", "colour": "#4EB3D3"
+													},
+													{
+														"name": "辛涅穆尔期", "colour": "#67BCD8"
+													},
+													{
+														"name": "普连斯巴奇期", "colour": "#80C5DD"
+													},													
+													{
+														"name": "托阿尔期", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "中侏罗世", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "阿连期", "colour": "#A6D9DD"
+													},
+													{
+														"name": "巴柔期", "colour": "#A6DDE0"
+													},
+													{
+														"name": "巴通期", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "卡洛夫期", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "晚侏罗世", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "牛津期", "colour": "#BFE7F1"
+													},
+													{
+														"name": "启莫里支期", "colour": "#CCECF4"
+													},
+													{
+														"name": "提通期", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "白垩纪", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "早白垩世", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "贝利亚斯期", "colour": "#8CCD60"
+													},
+													{
+														"name": "凡兰吟期", "colour": "#99D36A"
+													},
+													{
+														"name": "豪特里维期", "colour": "#A6D975"
+													},
+													{
+														"name": "巴列姆期", "colour": "#B3DF7F"
+													},
+													{
+														"name": "阿普弟期", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "阿尔布期", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "晚白垩世", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "森诺曼期", "colour": "#B3DE53"
+													},
+													{
+														"name": "土仑期", "colour": "#BFE35D"
+													},
+													{
+														"name": "科尼亚克期", "colour": "#CCE968"
+													},
+													{
+														"name": "桑托期", "colour": "#D9EF74"
+													},
+													{
+														"name": "坎佩尼期", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "马斯特里赫特期", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "新生代", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "古近纪", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "古新世", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "丹麦期", "colour": "#FDB462"
+													},
+													{
+														"name": "塞兰特期", "colour": "#FEBF65"
+													},
+													{
+														"name": "塔内提期", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "始新世", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "伊普雷斯期", "colour": "#FCA773"
+													},
+													{
+														"name": "卢台特期", "colour": "#FCB482"
+													},
+													{
+														"name": "巴尔顿期", "colour": "#FDC091"
+													},													
+													{
+														"name": "普里阿邦期", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "渐新世", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "鲁珀利期", "colour": "#FED99A"
+													},
+													{
+														"name": "恰特期", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "新近纪", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "中新世", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "阿启坦期", "colour": "#FFFF33"
+													},
+													{
+														"name": "布迪加尔期", "colour": "#FFFF41"
+													},
+													{
+														"name": "兰海期", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "塞拉瓦尔期", "colour": "#FFFF59"
+													},
+													{
+														"name": "托尔顿期", "colour": "#FFFF66"
+													},														
+													{
+														"name": "墨西拿期", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "上新世", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "赞克勒期", "colour": "#FFFFB3"
+													},
+													{
+														"name": "皮亚琴期", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "第四纪", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "更新世", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "格拉斯期", "colour": "#FFEDB3"
+													},
+													{
+														"name": "卡拉布里亚期", "colour": "#FFF2BA"
+													},
+													{
+														"name": "\"爱奥尼亚\"期", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "晚更新世", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "全新世", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

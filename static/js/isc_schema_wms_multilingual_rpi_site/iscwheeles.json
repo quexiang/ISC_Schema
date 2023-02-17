@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "Precámbrico", "colour": "#F74370",
+		"children": [
+			{
+				"name": "Hadeico", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "Arcaico", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "Eoarcaico", "colour": "#DA037F"
+					},	
+					{
+						"name": "Paleoarcaico", "colour": "#F4449F"
+					},	
+					{
+						"name": "Mesoarcaico", "colour": "#F768A9"
+					},	
+					{
+						"name": "Neoarcaico", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "Proterozoico", "colour": "#F73563",
+				"children": [
+					{
+						"name": "Paleoproterozoico", "colour": "#F74370",
+						"children": [
+							{
+								"name": "Sidérico", "colour": "#F74F7C"
+							},
+							{
+								"name": "Riásico", "colour": "#F75B89"
+							},
+							{
+								"name": "Orosírico", "colour": "#F76898"
+							},
+							{
+								"name": "Estatérico", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "Mesoproterozoico", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "Calímmico", "colour": "#FDC07A"
+							},
+							{
+								"name": "Ectásico", "colour": "#FDCC8A"
+							},
+							{
+								"name": "Esténico", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "Neoproterozoico", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "Tónico", "colour": "#FEBF4E"
+							},
+							{
+								"name": "Criogénico", "colour": "#FECC5C"
+							},
+							{
+								"name": "Ediacárico", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "Fanerozoico", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "Paleozoico", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "Cámbrico", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "Terreneuviense", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "Fortuniense", "colour": "#99B575"
+													},
+													{
+														"name": "Piso 2", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "Serie 2", "colour": "#99C078",
+												"children": [
+													{
+														"name": "Piso 3", "colour": "#A6C583"
+													},
+													{
+														"name": "Piso 4", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "Serie 3", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "Piso 5", "colour": "#B3D492"
+													},
+													{
+														"name": "Drumiense", "colour": "#BFD99D"
+													},													
+													{
+														"name": "Guzhangiense", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "Furongiense", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "Paibiense", "colour": "#CCEBAE"
+													},
+													{
+														"name": "Piso 9", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "Piso 10", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Ordovícico", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "Ordovícico Inferior", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "Tremadociense", "colour": "#33A97E"
+													},
+													{
+														"name": "Floiense", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "Ordovícico Medio", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "Dapingiense", "colour": "#66C092"
+													},
+													{
+														"name": "Darriwilense", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "Ordovícico Superior", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "Sandbiense", "colour": "#8CD094"
+													},
+													{
+														"name": "Katiense", "colour": "#99D69F"
+													},													
+													{
+														"name": "Hirnantiense", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Silúrico", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "Llandovery", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "Rhuddaniense", "colour": "#A6DCB5"
+													},
+													{
+														"name": "Aeroniense", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "Telychiense", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "Wenlock", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "Sheinwoodiense", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "Homeriense", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "Ludlow", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "Gorstiense", "colour": "#CCECDD"
+													},											
+													{
+														"name": "Ludfordiense", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "Pridoli", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Devónico", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "Devónico Inferior", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "Lochkoviense", "colour": "#E5B75A"
+													},
+													{
+														"name": "Praguiense", "colour": "#E5C468"
+													},													
+													{
+														"name": "Emsiense", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "Devónico Medio", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "Eifeliense", "colour": "#F1D576"
+													},
+													{
+														"name": "Givetiense", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "Devónico Superior", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "Frasniense", "colour": "#F2EDAD"
+													},
+													{
+														"name": "Fameniense", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Carbonífero", "colour": "#67A599",
+								"children": [
+									{
+										"name": "Misisipiense", "colour": "#678F66",
+										"children": [
+											{
+												"name": "Misisipiense Inferior", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "Tournaisiense", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "Misisipiense Medio", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "Viseense", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "Misisipiense Superior", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "Serpukhoviense", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "Pensilvaniense", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "Pensilvaniense Inferior", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "Bashkiriense", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "Pensilvaniense Medio", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "Moscoviense", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "Pensilvaniense Superior", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "Kasimoviense", "colour": "#BFD0C5"
+													},
+													{
+														"name": "Gzheliense", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "Pérmico", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "Cisuraliense", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "Asseliense", "colour": "#E36350"
+													},
+													{
+														"name": "Sakmariense", "colour": "#E36F5C"
+													},
+													{
+														"name": "Artinskiense", "colour": "#E37B68"
+													},													
+													{
+														"name": "Kunguriense", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "Guadalupiense", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "Roadiense", "colour": "#FB8069"
+													},
+													{
+														"name": "Wordiense", "colour": "#FB8D76"
+													},
+													{
+														"name": "Capitaniense", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "Lopingiense", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "Wuchiapingiense", "colour": "#FCB4A2"
+													},
+													{
+														"name": "Changhsingiense", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "Mesozoico", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "Triásico", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "Triásico Inferior", "colour": "#983999",
+												"children": [
+													{
+														"name": "Induense", "colour": "#A4469F"
+													},
+													{
+														"name": "Olenekiense", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "Triásico Medio", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "Anisiense", "colour": "#BC75B7"
+													},
+													{
+														"name": "Ladiniense", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "Triásico Superior", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "Carniense", "colour": "#C99BC9"
+													},
+													{
+														"name": "Noriense", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "Rhaetiense", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Jurásico", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "Jurásico Inferior", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "Hettangiense", "colour": "#4EB3D3"
+													},
+													{
+														"name": "Sinemuriensen", "colour": "#67BCD8"
+													},
+													{
+														"name": "Pliensbachiense", "colour": "#80C5DD"
+													},													
+													{
+														"name": "Toarciense", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "Jurásico Medio", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "Aaleniense", "colour": "#A6D9DD"
+													},
+													{
+														"name": "Bajociense", "colour": "#A6DDE0"
+													},
+													{
+														"name": "Bathoniense", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "Calloviense", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "Jurásico Superior", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "Oxfordiense", "colour": "#BFE7F1"
+													},
+													{
+														"name": "Kimmeridgiense", "colour": "#CCECF4"
+													},
+													{
+														"name": "Tithoniense", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Cretácico", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "Cretácico Inferior", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "Berriasiense", "colour": "#8CCD60"
+													},
+													{
+														"name": "Valanginiense", "colour": "#99D36A"
+													},
+													{
+														"name": "Hauteriviense", "colour": "#A6D975"
+													},
+													{
+														"name": "Barremiense", "colour": "#B3DF7F"
+													},
+													{
+														"name": "Aptiense", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "Albiense", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "Cretácico Superior", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "Cenomaniense", "colour": "#B3DE53"
+													},
+													{
+														"name": "Turoniense", "colour": "#BFE35D"
+													},
+													{
+														"name": "Coniaciense", "colour": "#CCE968"
+													},
+													{
+														"name": "Santoniense", "colour": "#D9EF74"
+													},
+													{
+														"name": "Campaniense", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "Maastrichtiense", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "Cenozoico", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "Paleógeno", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "Paleoceno", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "Daniense", "colour": "#FDB462"
+													},
+													{
+														"name": "Selandiense", "colour": "#FEBF65"
+													},
+													{
+														"name": "Thanetiense", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "Eoceno", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "Ypresiense", "colour": "#FCA773"
+													},
+													{
+														"name": "Lutetiense", "colour": "#FCB482"
+													},
+													{
+														"name": "Bartoniense", "colour": "#FDC091"
+													},													
+													{
+														"name": "Priaboniense", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "Oligoceno", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "Rupeliense", "colour": "#FED99A"
+													},
+													{
+														"name": "Chattiense", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Neógeno", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "Mioceno", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "Aquitaniense", "colour": "#FFFF33"
+													},
+													{
+														"name": "Burdigaliense", "colour": "#FFFF41"
+													},
+													{
+														"name": "Langhiense", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "Serravalliense", "colour": "#FFFF59"
+													},
+													{
+														"name": "Tortoniense", "colour": "#FFFF66"
+													},														
+													{
+														"name": "Messiniense", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "Plioceno", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "Zancleense", "colour": "#FFFFB3"
+													},
+													{
+														"name": "Piacenziense", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "Cuaternario", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "Pleistoceno", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "Gelasiense", "colour": "#FFEDB3"
+													},
+													{
+														"name": "Calabriense", "colour": "#FFF2BA"
+													},
+													{
+														"name": "\"Ioniense\"", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "Pleistoceno Superior", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "Holoceno", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

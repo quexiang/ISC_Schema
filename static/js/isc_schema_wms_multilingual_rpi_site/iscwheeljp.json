@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "先カンブリア時代", "colour": "#F74370",
+		"children": [
+			{
+				"name": "冥王代", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "始生代", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "原始生代", "colour": "#DA037F"
+					},	
+					{
+						"name": "古始生代", "colour": "#F4449F"
+					},	
+					{
+						"name": "中始生代", "colour": "#F768A9"
+					},	
+					{
+						"name": "新始生代", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "原生代", "colour": "#F73563",
+				"children": [
+					{
+						"name": "古原生代", "colour": "#F74370",
+						"children": [
+							{
+								"name": "シデリアン", "colour": "#F74F7C"
+							},
+							{
+								"name": "リヤシアン", "colour": "#F75B89"
+							},
+							{
+								"name": "オロシリアン", "colour": "#F76898"
+							},
+							{
+								"name": "スタテリアン", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "中原生代", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "カリミアン", "colour": "#FDC07A"
+							},
+							{
+								"name": "エクタシアン", "colour": "#FDCC8A"
+							},
+							{
+								"name": "ステニアン", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "新原生代", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "トニアン", "colour": "#FEBF4E"
+							},
+							{
+								"name": "クリオジェニアン", "colour": "#FECC5C"
+							},
+							{
+								"name": "エディアカラ紀", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "顕生代", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "古生代", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "カンブリア紀", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "テレニュービアン", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "フォルツニアン", "colour": "#99B575"
+													},
+													{
+														"name": "第2期", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "第2世", "colour": "#99C078",
+												"children": [
+													{
+														"name": "第3期", "colour": "#A6C583"
+													},
+													{
+														"name": "第4期", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "第3世", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "第5期", "colour": "#B3D492"
+													},
+													{
+														"name": "ドルミアン", "colour": "#BFD99D"
+													},													
+													{
+														"name": "グザンギアン", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "フロンギアン", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "パイビアン", "colour": "#CCEBAE"
+													},
+													{
+														"name": "第9期", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "第10期", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "オルドビス紀", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "オルドビス紀前期", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "トレマドキアン", "colour": "#33A97E"
+													},
+													{
+														"name": "フロイアン", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "オルドビス紀中期", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "ダピンギアン", "colour": "#66C092"
+													},
+													{
+														"name": "ダーリウィリアン", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "オルドビス紀後期", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "サンドビアン", "colour": "#8CD094"
+													},
+													{
+														"name": "カティアン", "colour": "#99D69F"
+													},													
+													{
+														"name": "ヒルナンティアン", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "シルル紀", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "ランドベリアン", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "ルダニアン", "colour": "#A6DCB5"
+													},
+													{
+														"name": "アエロニアン", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "テリチアン", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "ウェンロッキアン", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "シェインウッディアン", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "ホメリアン", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "ルーロビアン", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "ゴースティアン", "colour": "#CCECDD"
+													},											
+													{
+														"name": "ルドフォーディアン", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "プリドリアン", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "デボン紀", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "デボン紀前期", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "ロッコビアン", "colour": "#E5B75A"
+													},
+													{
+														"name": "プラギアン", "colour": "#E5C468"
+													},													
+													{
+														"name": "エムシアン", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "デボン紀中期", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "アイフェリアン", "colour": "#F1D576"
+													},
+													{
+														"name": "ジベーチアン", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "デボン紀後期", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "フラスニアン", "colour": "#F2EDAD"
+													},
+													{
+														"name": "ファメニアン", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "石炭紀", "colour": "#67A599",
+								"children": [
+									{
+										"name": "ミシシッピアン紀", "colour": "#678F66",
+										"children": [
+											{
+												"name": "ミシシッピアン紀前期", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "トルネージアン", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "ミシシッピアン紀中期", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "ビゼアン", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "ミシシッピアン紀後期", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "サプコビアン", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "ペンシルバニア紀", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "ペンシルバニア紀前期", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "バシキリアン", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "ペンシルバニア紀中期", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "モスコビアン", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "ペンシルバニア紀後期", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "カシモビアン", "colour": "#BFD0C5"
+													},
+													{
+														"name": "グゼリアン", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "ペルム紀", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "キスラリアン", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "アセリアン", "colour": "#E36350"
+													},
+													{
+														"name": "サクマリアン", "colour": "#E36F5C"
+													},
+													{
+														"name": "アルティンスキアン", "colour": "#E37B68"
+													},													
+													{
+														"name": "クングリアン", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "ガダリューピアン", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "ローディアン", "colour": "#FB8069"
+													},
+													{
+														"name": "ワーディアン", "colour": "#FB8D76"
+													},
+													{
+														"name": "カピタニアン", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "ロピンギアン", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "ウキアピンギアン", "colour": "#FCB4A2"
+													},
+													{
+														"name": "チャンシンギアン", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "中生代", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "三畳紀", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "三畳紀前期", "colour": "#983999",
+												"children": [
+													{
+														"name": "インドゥアン", "colour": "#A4469F"
+													},
+													{
+														"name": "オレネキアン", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "三畳紀中期", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "アニシアン", "colour": "#BC75B7"
+													},
+													{
+														"name": "ラディニアン", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "三畳紀後期", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "カーニアン", "colour": "#C99BC9"
+													},
+													{
+														"name": "ノーリアン", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "レーティアン", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "ジュラ紀", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "ジュラ紀前期", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "ヘッタンギアン", "colour": "#4EB3D3"
+													},
+													{
+														"name": "シネムール", "colour": "#67BCD8"
+													},
+													{
+														"name": "プリンスバッキアン", "colour": "#80C5DD"
+													},													
+													{
+														"name": "トアルシアン", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "ジュラ紀中期", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "アーレニアン", "colour": "#A6D9DD"
+													},
+													{
+														"name": "バジョシアン", "colour": "#A6DDE0"
+													},
+													{
+														"name": "バソニアン", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "カロビアン", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "ジュラ紀後期", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "オックスフォーディアン", "colour": "#BFE7F1"
+													},
+													{
+														"name": "キンメリッジアン", "colour": "#CCECF4"
+													},
+													{
+														"name": "チトニアン", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "白亜紀", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "白亜紀前期", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "ベリアシアン", "colour": "#8CCD60"
+													},
+													{
+														"name": "バランギニアン", "colour": "#99D36A"
+													},
+													{
+														"name": "オーテリビアン", "colour": "#A6D975"
+													},
+													{
+														"name": "バレミアン", "colour": "#B3DF7F"
+													},
+													{
+														"name": "アプチアン", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "アルビアン", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "白亜紀後期", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "セノマニアン", "colour": "#B3DE53"
+													},
+													{
+														"name": "チュロニアン", "colour": "#BFE35D"
+													},
+													{
+														"name": "コニアシアン", "colour": "#CCE968"
+													},
+													{
+														"name": "サントニアン", "colour": "#D9EF74"
+													},
+													{
+														"name": "カンパニアン", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "マーストリヒシアン", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "新生代", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "パレオジン紀", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "暁新世", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "ダニアン", "colour": "#FDB462"
+													},
+													{
+														"name": "セランディアン", "colour": "#FEBF65"
+													},
+													{
+														"name": "サネティアン", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "始新世", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "イプレシアン", "colour": "#FCA773"
+													},
+													{
+														"name": "ルテシアン", "colour": "#FCB482"
+													},
+													{
+														"name": "バートニアン", "colour": "#FDC091"
+													},													
+													{
+														"name": "プリアボニアン", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "漸新世", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "ルペル", "colour": "#FED99A"
+													},
+													{
+														"name": "シャティアン", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "ネオジン紀", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "中新世", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "アキタニアン", "colour": "#FFFF33"
+													},
+													{
+														"name": "バーディガリアン", "colour": "#FFFF41"
+													},
+													{
+														"name": "ランギアン", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "サーラバリアン", "colour": "#FFFF59"
+													},
+													{
+														"name": "トートニアン", "colour": "#FFFF66"
+													},														
+													{
+														"name": "メッシニアン", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "鮮新世", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "ザンクレアン", "colour": "#FFFFB3"
+													},
+													{
+														"name": "ﾋﾟｱｾﾝｼﾞｱﾝ", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "第四紀", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "更新世", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "ゲラシアン", "colour": "#FFEDB3"
+													},
+													{
+														"name": "カラブリア", "colour": "#FFF2BA"
+													},
+													{
+														"name": "イオニアン", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "更新世後期", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "完新世", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

@@ -1,0 +1,726 @@
+﻿[
+	{
+		"name": "Precambrian", "colour": "#F74370",
+		"children": [
+			{
+				"name": "Hadean", "colour": "#AE027E",
+				"children": [
+					{
+						"name": "", "colour": "#FFFFFF"
+					},
+					{
+						"name": "", "colour": "#FFFFFF"
+					}						
+				]
+			},
+			{
+				"name": "Archean", "colour": "#F0047F",
+				"children": [
+					{
+						"name": "Eoarchean", "colour": "#DA037F"
+					},	
+					{
+						"name": "Paleoarchean", "colour": "#F4449F"
+					},	
+					{
+						"name": "Mesoarchean", "colour": "#F768A9"
+					},	
+					{
+						"name": "Neoarchean", "colour": "#F99BC1"
+					}					
+				]
+			},
+			{
+				"name": "Proterozoic", "colour": "#F73563",
+				"children": [
+					{
+						"name": "Paleoproterozoic", "colour": "#F74370",
+						"children": [
+							{
+								"name": "Siderian", "colour": "#F74F7C"
+							},
+							{
+								"name": "Rhyacian", "colour": "#F75B89"
+							},
+							{
+								"name": "Orosirian", "colour": "#F76898"
+							},
+							{
+								"name": "Statherian", "colour": "#F875A7"
+							}							
+						]
+					},	
+					{
+						"name": "Mesoproterozoic", "colour": "#FDB462",
+						"children": [
+							{
+								"name": "Calymmian", "colour": "#FDC07A"
+							},
+							{
+								"name": "Ectasian", "colour": "#FDCC8A"
+							},
+							{
+								"name": "Stenian", "colour": "#FED99A"
+							}	
+						]
+					},	
+					{
+						"name": "Neoproterozoic", "colour": "#FEB342",
+						"children": [
+							{
+								"name": "Tonian", "colour": "#FEBF4E"
+							},
+							{
+								"name": "Cryogenian", "colour": "#FECC5C"
+							},
+							{
+								"name": "Ediacaran", "colour": "#FED96A"
+							}	
+						]
+					}				
+				]
+			}
+		]
+	},
+	
+	{
+		"name": "", "colour": "#FFFFFF",
+		"children": [
+			{
+				"name": "Phanerozoic", "colour": "#9AD9DD",
+				"children": [
+					{
+						"name": "Paleozoic", "colour": "#99C08D",
+						"children": [
+							{
+								"name": "Cambrian", "colour": "#7FA056",
+								"children": [
+									{
+										"name": "", "colour": "#7FA056",
+										"children": [
+											{
+												"name": "Terreneuvian", "colour": "#8CB06C",
+												"children": [
+													{
+														"name": "Fortunian", "colour": "#99B575"
+													},
+													{
+														"name": "Stage 2", "colour": "#A6BA80"
+													}
+												]
+											},
+											{
+												"name": "Series 2", "colour": "#99C078",
+												"children": [
+													{
+														"name": "Stage 3", "colour": "#A6C583"
+													},
+													{
+														"name": "Stage 4", "colour": "#B3CA8E"
+													}
+												]
+											},									
+											{
+												"name": "Series 3", "colour": "#A6CF86",
+												"children": [
+													{
+														"name": "Stage 5", "colour": "#B3D492"
+													},
+													{
+														"name": "Drumian", "colour": "#BFD99D"
+													},													
+													{
+														"name": "Guzhangian", "colour": "#CCDFAA"
+													}
+												]
+											},
+											{
+												"name": "Furongian", "colour": "#B3E095",
+												"children": [
+													{
+														"name": "Paibian", "colour": "#CCEBAE"
+													},
+													{
+														"name": "Stage 9", "colour": "#D9F0BB"
+													},													
+													{
+														"name": "Stage 10", "colour": "#E6F5C9"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Ordovician", "colour": "#009270",
+								"children": [
+									{
+										"name": "", "colour": "#009270",
+										"children": [
+											{
+												"name": "Lower Ordovician", "colour": "#1A9D6F",
+												"children": [
+													{
+														"name": "Tremadocian", "colour": "#33A97E"
+													},
+													{
+														"name": "Floian", "colour": "#41B087"
+													}
+												]
+											},
+											{
+												"name": "Middle Ordovician", "colour": "#4DB47E",
+												"children": [
+													{
+														"name": "Dapingian", "colour": "#66C092"
+													},
+													{
+														"name": "Darriwilian", "colour": "#74C69C"
+													}
+												]
+											},									
+											{
+												"name": "Upper Ordovician", "colour": "#7FCA93",
+												"children": [
+													{
+														"name": "Sandbian", "colour": "#8CD094"
+													},
+													{
+														"name": "Katian", "colour": "#99D69F"
+													},													
+													{
+														"name": "Hirnantian", "colour": "#A6DBAB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Silurian", "colour": "#B3E1B6",
+								"children": [
+									{
+										"name": "", "colour": "#B3E1B6",
+										"children": [
+											{
+												"name": "Llandovery", "colour": "#99D7B3",
+												"children": [
+													{
+														"name": "Rhuddanian", "colour": "#A6DCB5"
+													},
+													{
+														"name": "Aeronian", "colour": "#B3E1C2"
+													},													
+													{
+														"name": "Telychian", "colour": "#BFE6CF"
+													}
+												]
+											},
+											{
+												"name": "Wenlock", "colour": "#B3E1C2",
+												"children": [
+													{
+														"name": "Sheinwoodian", "colour": "#BFE6C3"
+													},												
+													{
+														"name": "Homerian", "colour": "#CCEBD1"
+													}
+												]
+											},									
+											{
+												"name": "Ludlow", "colour": "#BFE6CF",
+												"children": [
+													{
+														"name": "Gorstian", "colour": "#CCECDD"
+													},											
+													{
+														"name": "Ludfordian", "colour": "#D9F0DF"
+													}
+												]
+											},
+											{
+												"name": "Pridoli", "colour": "#E6F5E1",
+												"children": [
+													{
+														"name": "", "colour": "#E6F5E1"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Devonian", "colour": "#CB8C37",
+								"children": [
+									{
+										"name": "", "colour": "#CB8C37",
+										"children": [
+											{
+												"name": "Lower Devonian", "colour": "#E5AC4D",
+												"children": [
+													{
+														"name": "Lochkovian", "colour": "#E5B75A"
+													},
+													{
+														"name": "Pragian", "colour": "#E5C468"
+													},													
+													{
+														"name": "Emsian", "colour": "#E5D075"
+													}
+												]
+											},
+											{
+												"name": "Middle Devonian", "colour": "#F1C868",
+												"children": [
+													{
+														"name": "Eifelian", "colour": "#F1D576"
+													},
+													{
+														"name": "Givetian", "colour": "#F1E185"
+													}
+												]
+											},									
+											{
+												"name": "Upper Devonian", "colour": "#F1E19D",
+												"children": [
+													{
+														"name": "Frasnian", "colour": "#F2EDAD"
+													},
+													{
+														"name": "Famennian", "colour": "#F2EDC5"
+													}
+												]
+											}									
+										]
+									}
+								]
+							},
+							{
+								"name": "Carboniferous", "colour": "#67A599",
+								"children": [
+									{
+										"name": "Mississippian", "colour": "#678F66",
+										"children": [
+											{
+												"name": "Lower Mississippian", "colour": "#80AB6C",
+												"children": [
+													{
+														"name": "Tournaisian", "colour": "#8CB06C"
+													}
+												]
+											},
+											{
+												"name": "Middle Mississippian", "colour": "#99B46C",
+												"children": [
+													{
+														"name": "Visean", "colour": "#A6B96C"
+													}
+												]
+											},									
+											{
+												"name": "Upper Mississippian", "colour": "#B3BE6C",
+												"children": [
+													{
+														"name": "Serpukhovian", "colour": "#BFC26B"
+													}
+												]
+											}								
+										]
+									},
+									{
+										"name": "Pennsylvanian", "colour": "#99C2B5",
+										"children": [
+											{
+												"name": "Lower Pennsylvanian", "colour": "#8CBEB4",
+												"children": [
+													{
+														"name": "Bashkirian", "colour": "#99C2B5"
+													}
+												]
+											},
+											{
+												"name": "Middle Pennsylvanian", "colour": "#A6C7B7",
+												"children": [
+													{
+														"name": "Moscovian", "colour": "#C7CBB9"
+													}
+												]
+											},									
+											{
+												"name": "Upper Pennsylvanian", "colour": "#BFD0BA",
+												"children": [
+													{
+														"name": "Kasimovian", "colour": "#BFD0C5"
+													},
+													{
+														"name": "Gzhelian", "colour": "#CCD4C7"
+													}
+												]
+											}								
+										]
+									}									
+								]
+							},
+							{
+								"name": "Permian", "colour": "#F04028",
+								"children": [
+									{
+										"name": "", "colour": "#F04028",
+										"children": [
+											{
+												"name": "Cisuralian", "colour": "#EF5845",
+												"children": [
+													{
+														"name": "Asselian", "colour": "#E36350"
+													},
+													{
+														"name": "Sakmarian", "colour": "#E36F5C"
+													},
+													{
+														"name": "Artinskian", "colour": "#E37B68"
+													},													
+													{
+														"name": "Kungurian", "colour": "#E38776"
+													}
+												]
+											},
+											{
+												"name": "Guadalupian", "colour": "#FB745C",
+												"children": [
+													{
+														"name": "Roadian", "colour": "#FB8069"
+													},
+													{
+														"name": "Wordian", "colour": "#FB8D76"
+													},
+													{
+														"name": "Capitanian", "colour": "#FB9A85"
+													}
+												]
+											},									
+											{
+												"name": "Lopingian", "colour": "#FBA794",
+												"children": [
+													{
+														"name": "Wuchiapingian", "colour": "#FCB4A2"
+													},
+													{
+														"name": "Changhsingian", "colour": "#FCC0B2"
+													}
+												]
+											}								
+										]
+									}
+								]
+							}						
+						]
+					},
+					{
+						"name": "Mesozoic", "colour": "#67C5CA",
+						"children": [
+							{
+								"name": "Triassic", "colour": "#812B92",
+								"children": [
+									{
+										"name": "", "colour": "#812B92",
+										"children": [
+											{
+												"name": "Lower Triassic", "colour": "#983999",
+												"children": [
+													{
+														"name": "Induan", "colour": "#A4469F"
+													},
+													{
+														"name": "Olenekian", "colour": "#B051A5"
+													}
+												]
+											},
+											{
+												"name": "Middle Triassic", "colour": "#B168B1",
+												"children": [
+													{
+														"name": "Anisian", "colour": "#BC75B7"
+													},
+													{
+														"name": "Ladinian", "colour": "#C983BF"
+													}
+												]
+											},									
+											{
+												"name": "Upper Triassic", "colour": "#BD8CC3",
+												"children": [
+													{
+														"name": "Carnian", "colour": "#C99BC9"
+													},
+													{
+														"name": "Norian", "colour": "#D6AAD3"
+													},													
+													{
+														"name": "Rhaetian", "colour": "#E3B9DB"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Jurassic", "colour": "#34B2C9",
+								"children": [
+									{
+										"name": "", "colour": "#34B2C9",
+										"children": [
+											{
+												"name": "Lower Jurassic", "colour": "#42AED0",
+												"children": [
+													{
+														"name": "Hettangian", "colour": "#4EB3D3"
+													},
+													{
+														"name": "Sinemurian", "colour": "#67BCD8"
+													},
+													{
+														"name": "Pliensbachian", "colour": "#80C5DD"
+													},													
+													{
+														"name": "Toarcian", "colour": "#99CEE3"
+													}
+												]
+											},
+											{
+												"name": "Middle Jurassic", "colour": "#80CFD8",
+												"children": [
+													{
+														"name": "Aalenian", "colour": "#A6D9DD"
+													},
+													{
+														"name": "Bajocian", "colour": "#A6DDE0"
+													},
+													{
+														"name": "Bathonian", "colour": "#B3E2E3"
+													},													
+													{
+														"name": "Callovian", "colour": "#BFE7E5"
+													}
+												]
+											},									
+											{
+												"name": "Upper Jurassic", "colour": "#B3E3EE",
+												"children": [
+													{
+														"name": "Oxfordian", "colour": "#BFE7F1"
+													},
+													{
+														"name": "Kimmeridgian", "colour": "#CCECF4"
+													},
+													{
+														"name": "Tithonian", "colour": "#D9F1F7"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Cretaceous", "colour": "#7FC64E",
+								"children": [
+									{
+										"name": "", "colour": "#7FC64E",
+										"children": [
+											{
+												"name": "Lower Cretaceous", "colour": "#8CCD57",
+												"children": [
+													{
+														"name": "Berriasian", "colour": "#8CCD60"
+													},
+													{
+														"name": "Valanginian", "colour": "#99D36A"
+													},
+													{
+														"name": "Hauterivian", "colour": "#A6D975"
+													},
+													{
+														"name": "Barremian", "colour": "#B3DF7F"
+													},
+													{
+														"name": "Aptian", "colour": "#BFE48A"
+													},																										
+													{
+														"name": "Albian", "colour": "#CCEA97"
+													}
+												]
+											},
+											{
+												"name": "Upper Cretaceous", "colour": "#A6D84A",
+												"children": [
+													{
+														"name": "Cenomanian", "colour": "#B3DE53"
+													},
+													{
+														"name": "Turonian", "colour": "#BFE35D"
+													},
+													{
+														"name": "Coniacian", "colour": "#CCE968"
+													},
+													{
+														"name": "Santonian", "colour": "#D9EF74"
+													},
+													{
+														"name": "Campanian", "colour": "#E6F47F"
+													},																										
+													{
+														"name": "Maastrichtian", "colour": "#F2FA8C"
+													}
+												]
+											}							
+										]
+									}
+								]
+							}	
+						]
+					},
+					{
+						"name": "Cenozoic", "colour": "#F2F91D",
+						"children": [
+							{
+								"name": "Paleogene", "colour": "#FD9A52",
+								"children": [
+									{
+										"name": "", "colour": "#FD9A52",
+										"children": [
+											{
+												"name": "Paleocene", "colour": "#FDA75F",
+												"children": [
+													{
+														"name": "Danian", "colour": "#FDB462"
+													},
+													{
+														"name": "Selandian", "colour": "#FEBF65"
+													},
+													{
+														"name": "Thanetian", "colour": "#FDBF6F"
+													}
+												]
+											},
+											{
+												"name": "Eocene", "colour": "#FDB46C",
+												"children": [
+													{
+														"name": "Ypresian", "colour": "#FCA773"
+													},
+													{
+														"name": "Lutetian", "colour": "#FCB482"
+													},
+													{
+														"name": "Bartonian", "colour": "#FDC091"
+													},													
+													{
+														"name": "Priabonian", "colour": "#FDCDA1"
+													}
+												]
+											},									
+											{
+												"name": "Oligocene", "colour": "#FDC07A",
+												"children": [
+													{
+														"name": "Rupelian", "colour": "#FED99A"
+													},
+													{
+														"name": "Chattian", "colour": "#FEE6AA"
+													}
+												]
+											}								
+										]
+									}
+								]
+							},
+							{
+								"name": "Neogene", "colour": "#FFE619",
+								"children": [
+									{
+										"name": "", "colour": "#FFE619",
+										"children": [
+											{
+												"name": "Miocene", "colour": "#FFFF00",
+												"children": [
+													{
+														"name": "Aquitanian", "colour": "#FFFF33"
+													},
+													{
+														"name": "Burdigalian", "colour": "#FFFF41"
+													},
+													{
+														"name": "Langhian", "colour": "#FFFF4D"
+													},	
+													{
+														"name": "Serravallian", "colour": "#FFFF59"
+													},
+													{
+														"name": "Tortonian", "colour": "#FFFF66"
+													},														
+													{
+														"name": "Messinian", "colour": "#FFFF73"
+													}
+												]
+											},
+											{
+												"name": "Pliocene", "colour": "#FFFF99",
+												"children": [
+													{
+														"name": "Zanclean", "colour": "#FFFFB3"
+													},
+													{
+														"name": "Piacenzian", "colour": "#FFFFBF"
+													}
+												]
+											}							
+										]
+									}
+								]
+							},
+							{
+								"name": "Quaternary", "colour": "#F9F97F",
+								"children": [
+									{
+										"name": "", "colour": "#F9F97F",
+										"children": [
+											{
+												"name": "Pleistocene", "colour": "#FFF2AE",
+												"children": [
+													{
+														"name": "Gelasian", "colour": "#FFEDB3"
+													},
+													{
+														"name": "Calabrian", "colour": "#FFF2BA"
+													},
+													{
+														"name": "\"Ionian\"", "colour": "#FFF2C7"
+													},													
+													{
+														"name": "Upper Pleistocene", "colour": "#FFF2D3"
+													}
+												]
+											},
+											{
+												"name": "Holocene", "colour": "#FEF2E0",
+												"children": [
+													{
+														"name": "", "colour": "#FEF2E0"
+													}
+												]
+											}						
+										]
+									}
+								]
+							}	
+						]
+					}
+				]
+			}
+		]
+	}
+]

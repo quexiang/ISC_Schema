@@ -1,0 +1,620 @@
+﻿<StyledLayerDescriptor version="1.0.0" xmlns="http://www.opengis.net/sld" xmlns:gml="http://www.opengis.net/gml" xmlns:ogc="http://www.opengis.net/ogc" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/sld http://schemas.opengis.net/sld/1.0.0/StyledLayerDescriptor.xsd">
+<NamedLayer>
+<Name>DEU_EN_BGR_1M_Geological_Units</Name>
+<UserStyle>
+<FeatureTypeStyle>
+<Rule>
+<Name>Quaternary</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Quaternary</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f9f97f</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Holocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Holocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fef2e0</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Pleistocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Pleistocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fff2ae</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Neogene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Neogene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffe619</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Pliocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Pliocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffff99</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Miocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Miocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffff00</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Tortonian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Tortonian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffff66</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Burdigalian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Burdigalian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffff55</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Aquitanian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Aquitanian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ffff33</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Paleogene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Paleogene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fd9a52</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Oligocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Oligocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fdc07a</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Eocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Eocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fdb46c</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Paleocene</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Paleocene</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fda75f</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Cretaceous</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Cretaceous</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#7fc64e</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>UpperCretaceous</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:UpperCretaceous</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#a6d84a</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Campanian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Campanian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#e6f47f</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Santonian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Santonian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#d9ef74</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Turonian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Turonian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#bfe35d</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Cenomanian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Cenomanian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b3de53</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>LowerCretaceous</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:LowerCretaceous</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#8ccd57</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Albian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Albian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ccea97</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Valanginian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Valanginian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#99d36a</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Berriasian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Berriasian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#8ccd60</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Jurassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Jurassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#34b2c9</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>UpperJurassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:UpperJurassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b3e3ee</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>MiddleJurassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:MiddleJurassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#80cfd8</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>LowerJurassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:LowerJurassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#42aed0</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Triassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Triassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#812b92</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>UpperTriassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:UpperTriassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#bd8cc3</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Rhaetian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Rhaetian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#e3b9db</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Norian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Norian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#d6aad3</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Carnian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Carnian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#c99bcb</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>MiddleTriassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:MiddleTriassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b168b1</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Ladinian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Ladinian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#c983bf</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Anisian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Anisian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#bc75b7</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>LowerTriassic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:LowerTriassic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#983999</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Olenekian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Olenekian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b251a5</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Induan</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Induan</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#9a469f</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Permian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Permian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f04028</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Lopingian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Lopingian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fba794</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Wuchiapingian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Wuchiapingian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#fcb4a2</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Cisuralian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Cisuralian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ef5845</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Carboniferous</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Carboniferous</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#67a599</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Pennsylvanian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Pennsylvanian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#99c2b5</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Gzhelian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Gzhelian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#ccd4c7</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Moscovian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Moscovian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b3cbb9</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Bashkirian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Bashkirian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#99c2b5</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Serpukhovian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Serpukhovian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#bfc26b</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Visean</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Visean</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#a6b96c</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Devonian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Devonian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#cb8c37</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Frasnian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Frasnian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f2edad</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>MiddleDevonian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:MiddleDevonian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f1c868</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Givetian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Givetian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f1e185</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Eifelian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Eifelian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f1d576</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Emsian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Emsian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#e5d075</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Lochkovian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Lochkovian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#e5b75a</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Silurian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Silurian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#b3e1b6</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Ordovician</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Ordovician</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#009270</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Cambrian</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Cambrian</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#7fa056</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Proterozoic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Proterozoic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#f73563</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+<Rule>
+<Name>Neoproterozoic</Name>
+<ogc:Filter><ogc:PropertyIsEqualTo><ogc:PropertyName>URN_STRA_1</ogc:PropertyName><ogc:Literal>urn:cgi:classifier:ICS:StratChart:2008:Neoproterozoic</ogc:Literal></ogc:PropertyIsEqualTo></ogc:Filter>
+<PolygonSymbolizer>
+<Fill>
+<CssParameter name="fill">#feb342</CssParameter>
+<CssParameter name="fill-opacity">1.00</CssParameter>
+</Fill>
+</PolygonSymbolizer>
+</Rule>
+</FeatureTypeStyle>
+</UserStyle>
+</NamedLayer>
+</StyledLayerDescriptor>
+
